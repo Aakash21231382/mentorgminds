@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../../assets/css/Centers/OfflineCentres.css'; 
+import '../../assets/css/centers/OfflineCentres.css'; 
 import { FaArrowRight } from 'react-icons/fa';
 import { MdArrowOutward } from 'react-icons/md';
 import { offlineCentresApi } from '../../api/offlineCentresApi';
