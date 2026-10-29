@@ -1,0 +1,221 @@
+/* =========================================
+   USERS MANAGEMENT - PREMIUM STYLES
+========================================= */
+
+.users-page {
+
+   /* padding-top: 20px; */
+   padding: 20px 20px;
+  min-height: calc(100vh - 70px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.users-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e2e8f0;
+}
+
+.users-header-title {
+  color: #1a202c;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.users-header-subtitle {
+  color: #718096;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+/* --- Toolbar (Search & Filter) --- */
+.users-toolbar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.users-search-input,
+.users-filter-select {
+  padding: 12px 16px;
+  border: 1px solid #cbd5e0;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fff;
+  color: #2d3748;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.users-search-input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.users-search-input:focus,
+.users-filter-select:focus {
+  border-color: #F6881F;
+  box-shadow: 0 0 0 4px rgba(246, 136, 31, 0.15);
+}
+
+/* --- Table Styles --- */
+.users-table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #edf2f7;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.users-table th {
+  text-align: left;
+  padding: 16px;
+  background: #f8fafc;
+  color: #4a5568;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.th-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.users-table td {
+  padding: 16px;
+  border-bottom: 1px solid #edf2f7;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.users-table tr:hover {
+  background-color: #fffaf0; /* Soft orange hover */
+}
+
+.users-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Badges --- */
+.users-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.badge-verified {
+  background: #c6f6d5;
+  color: #276749;
+}
+
+.badge-unverified {
+  background: #fed7d7;
+  color: #9b2c2c;
+}
+
+.badge-role {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #ebf4ff;
+  color: #3182ce;
+  text-transform: capitalize;
+}
+
+.badge-role.admin {
+  background: #faf5ff;
+  color: #6b46c1;
+}
+
+/* --- States (Loading, Error, Empty) --- */
+.users-message-container {
+  text-align: center;
+  padding: 60px 20px;
+  color: #718096;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* --- Error State --- */
+.users-error-container {
+  color: #e53e3e;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.users-error-icon {
+  font-size: 20px;
+  color: #e53e3e;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   USERS — MOBILE RESPONSIVE
+========================================= */
+@media (max-width: 768px) {
+  .users-page {
+    padding: 16px;
+  }
+
+  .users-card {
+    padding: 16px;
+  }
+
+  .users-toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .users-search-input {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .users-filter-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .users-header-title {
+    font-size: 18px;
+  }
+
+  .users-table-container {
+    overflow-x: auto;
+  }
+
+  .users-table {
+    min-width: 520px;
+    font-size: 13px;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 10px 12px;
+  }
+}

@@ -1,0 +1,427 @@
+/* =====================================================
+   AI HERO SECTION
+===================================================== */
+.ai-hero-section {
+  width: 100%;
+  background-color: #031427; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Padding adjust ki hai taaki left content center mein rahe */
+  padding: 50px 0 120px 0; 
+  position: relative;
+  height: 591px;
+  /* OVERFLOW HIDDEN YAHAN SE HATA DIYA HAI TAAKI FORM BAHAR NIKAL SAKE */
+  overflow: visible; 
+}
+
+/* 1. Normal laptops ke liye default container behavior (1320px) */
+.ai-hero-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 2. Sirf badi screens (1920px+) ke liye auto-stretch */
+@media (min-width: 1600px) {
+  .ai-hero-container {
+    /* max-width: 1850px !important; */
+    padding: 0 3%;
+  }
+}
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+.ai-hero-left {
+  flex: 1;
+  max-width: 650px;
+}
+
+.ai-hero-left h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  font: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: -1.2px;
+}
+
+.ai-hero-left h1 span {
+  color: #F07500;
+}
+
+.ai-hero-left h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 30px;
+  letter-spacing: 0px;
+  line-height: 100%;
+}
+
+.ai-hero-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ai-hero-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.ai-check-icon {
+  color: #F07500;
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* =====================================================
+   RIGHT FORM CARD (Overlap Logic Added Here)
+===================================================== */
+.ai-hero-right {
+  flex: 0 0 460px;
+  
+  /* YAHAN POSITION RELATIVE AUR TOP LAGA KAR FORM KO NEECHE KIYA HAI */
+  position: relative;
+  top: 150px; 
+  z-index: 10;
+}
+
+.ai-form-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+/* ── Form Head ── */
+.form-head-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.counsellor-icon {
+  width: 62px;
+  height: 62px;
+  background: #F07500;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.form-head-text h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 0 0 5px 0;
+}
+
+.form-head-text p {
+  font-size: 15px;
+  color: #564336;
+  margin: 0;
+}
+
+/* ── Input Group ── */
+.ai-input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #F0F0F0;
+  border-radius: 16px;
+  height: 65px;
+  margin-bottom: 20px;
+  overflow: visible;  /* dropdown ke liye visible rakho */
+  background: #fff;
+  position: relative;
+}
+
+.country-code-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 15px;
+  border-right: 1px solid #e0e0e0;
+  height: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  background: #fdfdfd;
+  border-radius: 16px 0 0 16px;
+  position: relative;  /* dropdown anchor */
+  flex-shrink: 0;
+  user-select: none;
+  z-index: 10;
+}
+
+.country-code-box img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.ai-country-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.country-code-box .chevron-down {
+  font-size: 12px;
+  color: #888;
+  transition: transform 0.2s ease;
+}
+
+.country-code-box .chevron-down.open {
+  transform: rotate(180deg);
+}
+
+.ai-country-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  width: 240px;
+  max-height: 280px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-country-search {
+  border: none;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 8px 12px;
+  font-size: 13px;
+  outline: none;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.ai-country-list {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.ai-country-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  background: #fff;
+  color: #333;
+  transition: background-color 0.15s;
+}
+
+.ai-country-item:hover {
+  background: #f7f7f7;
+}
+
+.ai-country-item.selected {
+  background: #fff7ee;
+}
+
+.ai-country-flag {
+  width: 22px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.ai-country-name {
+  flex: 1;
+}
+
+.ai-country-dial {
+  color: #888;
+  font-size: 12px;
+}
+
+.ai-country-empty {
+  padding: 12px;
+  color: #aaa;
+  font-size: 13px;
+  text-align: center;
+}
+
+.ai-input-group input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #333;
+}
+
+.ai-input-group input::placeholder {
+  color: #999;
+}
+
+/* ── Submit Button ── */
+.ai-submit-btn {
+  width: 100%;
+  min-height: 56px;
+  height: auto;
+  background: #F07500;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-submit-btn:hover:not(:disabled) {
+  background: #d96400;
+}
+
+.ai-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── Terms Text ── */
+.ai-terms {
+  text-align: center;
+  font-size: 16px;
+  color: #1A1A1AE5;
+  margin-bottom: 30px;
+  opacity: .9;
+}
+
+.ai-terms strong {
+  color: #333;
+  cursor: pointer;
+}
+
+/* ── Form Features (Bottom Row) ── */
+.form-footer-features {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 25px;
+}
+
+.form-feat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.form-feat-item .feat-icon {
+  font-size: 30px;
+  color: #000000;
+}
+
+.form-feat-item span {
+  font-size: 14px;
+  color: #1A1A1AE5;
+  opacity: 0.9;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 1100px) {
+  .ai-hero-container {
+    gap: 30px;
+  }
+  .ai-hero-left h1 {
+    font-size: 40px;
+  }
+  .ai-hero-right {
+    flex: 0 0 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .ai-hero-section {
+    padding: 60px 0;
+  }
+  .ai-hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ai-hero-left {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ai-hero-list li {
+    text-align: left;
+    justify-content: flex-start;
+  }
+  .ai-hero-right {
+    flex: unset;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    top: 0; /* Mobile par overlap hata diya taaki layout na bigde */
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-hero-section {
+    padding: 40px 0;
+  }
+  .ai-hero-left h1 {
+    font-size: 32px;
+  }
+  .ai-hero-left h3 {
+    font-size: 20px;
+  }
+  .ai-hero-list li {
+    font-size: 14px;
+  }
+  .ai-form-card {
+    padding: 25px 20px;
+  }
+  .form-feat-item span {
+    font-size: 10px;
+  }
+}

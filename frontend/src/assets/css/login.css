@@ -1,0 +1,201 @@
+/* =====================================================
+   LOGIN PAGE STYLING (Project Theme Matching)
+===================================================== */
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F9FAFB;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.login-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #FF6E06;
+  letter-spacing: -0.8px;
+  margin-bottom: 8px;
+}
+
+.login-header p {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Custom Input Wrapper */
+.input-group-custom {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  color: #9CA3AF;
+  font-size: 16px;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.input-group-custom input {
+  width: 100%;
+  height: 50px;
+  background: #FAFAFA;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 0 45px 0 45px;
+  font-size: 15px;
+  color: #1A1A1A;
+  outline: none;
+  transition: all 0.25s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.input-group-custom input::placeholder {
+  color: #9CA3AF;
+  font-weight: 400;
+}
+
+.input-group-custom input:focus {
+  background: #FFFFFF;
+  border-color: #FF6E06;
+  box-shadow: 0 0 0 4px rgba(255, 110, 6, 0.08);
+}
+
+.input-group-custom input:focus ~ .input-icon {
+  color: #FF6E06;
+}
+
+/* Password Eye Button */
+.eye-btn {
+  position: absolute;
+  right: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #9CA3AF;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.eye-btn:hover {
+  color: #1A1A1A;
+}
+
+/* Forgot Password */
+.forgot-password-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.forgot-link {
+  font-size: 14px;
+  color: #6B7280;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgot-link:hover {
+  color: #FF6E06;
+  text-decoration: underline;
+}
+
+/* Login Submit Button */
+.login-btn {
+  width: 100%;
+  height: 50px;
+  background: #FF6E06;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(255, 110, 6, 0.25);
+}
+
+.login-btn:hover {
+  background: #E05D00;
+  box-shadow: 0 6px 16px rgba(255, 110, 6, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Footer / Don't have an account */
+.login-footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #6B7280;
+}
+
+.login-footer a {
+  color: #FF6E06;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.2s;
+}
+
+.login-footer a:hover {
+  color: #E05D00;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .login-page {
+    padding: 24px 16px;
+    background: #F9FAFB;
+  }
+  .login-card {
+    padding: 30px 20px;
+    border-radius: 16px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    background: #ffffff;
+    margin: 0 auto;
+  }
+  .login-header h2 {
+    font-size: 34px;
+  }
+  .login-logo {
+    height: 50px;
+  }
+}

@@ -1,0 +1,711 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--page-bg);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+  .mb-page {
+      padding: 20px 0px;
+  }
+}
+
+.mb-header-row{
+  margin-bottom: 10px;
+}
+
+/* ============================================
+   GLOBAL THEME VARIABLES
+   Light theme = default
+   Dark theme  = [data-theme='dark'] on body
+============================================ */
+
+:root {
+  /* Brand */
+  --orange:    #f6881f;
+  --orange2:   #f18d21;
+  --grad:      linear-gradient(90deg, #f6881f, #f18d21);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Light Theme */
+  --page-bg:        #f0f2f5;
+  --surface:        #ffffff;
+  --surface-2:      #f8f9fa;
+  --border-color:   #e8eaed;
+  --text-main:      #1a1a2e;
+  --text-muted:     #6b7280;
+  --text-light:     #9ca3af;
+  --input-bg:       #f3f4f6;
+  --input-text:     #1a1a2e;
+  --shadow-sm:      0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md:      0 4px 16px rgba(0,0,0,0.08);
+
+  /* Sidebar specific */
+  --sidebar-bg:         #ffffff;
+  --sidebar-border:     #e8eaed;
+  --sidebar-text:       #374151;
+  --sidebar-text-muted: #6b7280;
+  --sidebar-hover-bg:   #fff5eb;
+  --sidebar-active-bg:  #fff5eb;
+
+  /* Header specific */
+  --header-bg:     #ffffff;
+  --header-border: #e8eaed;
+  --header-shadow: 0 2px 8px rgba(0,0,0,0.06);
+
+  /* Content */
+  --content-bg:  #f0f2f5;
+}
+
+/* ============================================
+   DARK THEME OVERRIDES
+============================================ */
+
+[data-theme='dark'] {
+  --page-bg:        #0f1117;
+  --surface:        #1a1d27;
+  --surface-2:      #222533;
+  --border-color:   #2e3347;
+  --text-main:      #e2e8f0;
+  --text-muted:     #94a3b8;
+  --text-light:     #64748b;
+  --input-bg:       #222533;
+  --input-text:     #f1f5f9;
+  --shadow-sm:      0 1px 4px rgba(0,0,0,0.3);
+  --shadow-md:      0 4px 16px rgba(0,0,0,0.4);
+
+  --sidebar-bg:         #1a1d27;
+  --sidebar-border:     #2e3347;
+  --sidebar-text:       #cbd5e1;
+  --sidebar-text-muted: #64748b;
+  --sidebar-hover-bg:   rgba(246, 136, 31, 0.12);
+  --sidebar-active-bg:  rgba(246, 136, 31, 0.15);
+
+  --header-bg:     #1a1d27;
+  --header-border: #2e3347;
+  --header-shadow: 0 2px 12px rgba(0,0,0,0.4);
+
+  --content-bg:  #0f1117;
+}
+
+/* Better placeholder visibility in dark theme */
+[data-theme='dark'] input::placeholder,
+[data-theme='dark'] textarea::placeholder,
+[data-theme='dark'] select::placeholder {
+  color: #64748b;
+  opacity: 0.8;
+}
+
+/* ============================================
+   DARK THEME — GLOBAL COMPONENT OVERRIDES
+   Yahan saare hardcoded white/light colors
+   override ho jaate hain dark mode mein.
+   Kisi bhi page/component ka background
+   automatically dark ho jaayega.
+============================================ */
+
+/* ── Cards & Panels ── */
+[data-theme='dark'] .mb-card,
+[data-theme='dark'] .mu-card,
+[data-theme='dark'] .mn-card,
+[data-theme='dark'] .mf-card,
+[data-theme='dark'] .mcd-section-card,
+[data-theme='dark'] .mcd-header-card,
+[data-theme='dark'] .adm-card,
+[data-theme='dark'] .cb-card,
+[data-theme='dark'] .users-card,
+[data-theme='dark'] .dashboard-section,
+[data-theme='dark'] .stat-card,
+[data-theme='dark'] .mc-course-form-wrap,
+[data-theme='dark'] .mf-modal,
+[data-theme='dark'] .mn-modal-content,
+[data-theme='dark'] .mn-modal-close {
+  background: var(--surface) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+/* ── Category / Item rows ── */
+[data-theme='dark'] .mc-cat-header,
+[data-theme='dark'] .mc-course-item,
+[data-theme='dark'] .mc-course-form-wrap {
+  background: var(--surface) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .mc-cat-row {
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .mc-courses-panel {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* ── Table headers & rows ── */
+[data-theme='dark'] .mn-table th,
+[data-theme='dark'] .mf-table th,
+[data-theme='dark'] .adm-table th,
+[data-theme='dark'] .cb-table th,
+[data-theme='dark'] .users-table th,
+[data-theme='dark'] .dashboard-th {
+  background: var(--surface-2) !important;
+  color: var(--text-muted) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .mn-table td,
+[data-theme='dark'] .mf-table td,
+[data-theme='dark'] .adm-table .adm-td,
+[data-theme='dark'] .cb-table .cb-td,
+[data-theme='dark'] .users-table td,
+[data-theme='dark'] .dashboard-td {
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .mn-table tr:hover,
+[data-theme='dark'] .mf-table tr:hover td,
+[data-theme='dark'] .users-table tr:hover,
+[data-theme='dark'] .adm-tr:hover,
+[data-theme='dark'] .cb-tr:hover,
+[data-theme='dark'] .dashboard-table tbody tr:hover {
+  background: rgba(246, 136, 31, 0.06) !important;
+}
+
+[data-theme='dark'] .mn-tr-child {
+  background: var(--surface-2) !important;
+}
+
+/* ── Form inputs, selects, textareas ── */
+[data-theme='dark'] .mb-input,
+[data-theme='dark'] .mb-textarea,
+[data-theme='dark'] .mb-input-sm,
+[data-theme='dark'] .mu-input,
+[data-theme='dark'] .mu-textarea,
+[data-theme='dark'] .mu-input-sm,
+[data-theme='dark'] .mn-form-input,
+[data-theme='dark'] .mn-form-select,
+[data-theme='dark'] .mn-form-textarea,
+[data-theme='dark'] .mf-form-input,
+[data-theme='dark'] .mf-form-select,
+[data-theme='dark'] .adm-status-select,
+[data-theme='dark'] .users-search-input,
+[data-theme='dark'] .users-filter-select {
+  background: var(--input-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+/* ── Section headers (collapse) ── */
+[data-theme='dark'] .mcd-section-header {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .mcd-section-title,
+[data-theme='dark'] .mcd-toggle-wrap {
+  color: var(--text-main) !important;
+}
+
+/* ── Array items ── */
+[data-theme='dark'] .mcd-array-item {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* ── Section body ── */
+[data-theme='dark'] .mcd-section-body {
+  background: var(--surface) !important;
+}
+
+/* ── Filter / toolbar buttons (inactive state) ── */
+[data-theme='dark'] .mn-filter-btn,
+[data-theme='dark'] .adm-filter-btn,
+[data-theme='dark'] .cb-filter-btn {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-muted) !important;
+}
+
+[data-theme='dark'] .mn-filter-btn:hover,
+[data-theme='dark'] .adm-filter-btn:hover,
+[data-theme='dark'] .cb-filter-btn:hover {
+  border-color: var(--orange) !important;
+  color: var(--orange) !important;
+}
+
+/* ── Secondary buttons ── */
+[data-theme='dark'] .mb-btn-secondary,
+[data-theme='dark'] .mu-btn-secondary,
+[data-theme='dark'] .mn-btn-secondary,
+[data-theme='dark'] .mf-btn-secondary {
+  background: var(--surface-2) !important;
+  color: var(--text-muted) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .mb-btn-secondary:hover,
+[data-theme='dark'] .mu-btn-secondary:hover,
+[data-theme='dark'] .mn-btn-secondary:hover,
+[data-theme='dark'] .mf-btn-secondary:hover {
+  background: var(--border-color) !important;
+}
+
+/* ── Item cards (banners, university logos etc.) ── */
+[data-theme='dark'] .mb-item,
+[data-theme='dark'] .mu-item {
+  background: var(--surface) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* ── Item thumbnails ── */
+[data-theme='dark'] .mb-thumb,
+[data-theme='dark'] .mu-thumb,
+[data-theme='dark'] .mc-cat-thumb,
+[data-theme='dark'] .mc-course-logo {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* ── Add logo form (dashed orange) ── */
+[data-theme='dark'] .mu-add-logo-form {
+  background: rgba(246, 136, 31, 0.08) !important;
+}
+
+/* ── Columns card (footer) ── */
+[data-theme='dark'] .mf-col-card {
+  background: var(--surface) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .mf-col-card.selected {
+  background: rgba(246, 136, 31, 0.1) !important;
+  border-color: var(--orange) !important;
+}
+
+[data-theme='dark'] .mf-col-heading {
+  color: var(--text-main) !important;
+}
+
+/* ── Type toggle (footer modal) ── */
+[data-theme='dark'] .mf-type-btn {
+  background: var(--surface-2) !important;
+  color: var(--text-muted) !important;
+}
+
+[data-theme='dark'] .mf-type-toggle {
+  border-color: var(--border-color) !important;
+}
+
+/* ── Stat cards (dashboard) ── */
+[data-theme='dark'] .stat-card {
+  background: var(--surface) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+[data-theme='dark'] .stat-label {
+  color: var(--text-muted) !important;
+}
+
+[data-theme='dark'] .stat-value {
+  color: var(--text-main) !important;
+}
+
+/* ── Dashboard welcome banner ── */
+[data-theme='dark'] .dashboard-welcome {
+  background: linear-gradient(135deg, #1e2235 0%, #252b40 100%) !important;
+}
+
+/* ── Summary items (dashboard) ── */
+[data-theme='dark'] .summary-item {
+  background: var(--surface-2) !important;
+}
+
+[data-theme='dark'] .summary-item:hover {
+  background: var(--border-color) !important;
+}
+
+[data-theme='dark'] .summary-label {
+  color: var(--text-muted) !important;
+}
+
+[data-theme='dark'] .summary-value {
+  color: var(--text-main) !important;
+}
+
+/* ── Edit / delete action buttons ── */
+[data-theme='dark'] .mb-btn-edit,
+[data-theme='dark'] .mu-btn-edit,
+[data-theme='dark'] .mf-btn-icon.edit:hover {
+  background: rgba(49, 130, 206, 0.15) !important;
+  color: #63b3ed !important;
+}
+
+[data-theme='dark'] .mb-btn-delete,
+[data-theme='dark'] .mu-btn-delete,
+[data-theme='dark'] .mcd-remove-btn,
+[data-theme='dark'] .mf-btn-icon.delete:hover {
+  background: rgba(229, 62, 62, 0.12) !important;
+  color: #fc8181 !important;
+}
+
+/* ── Expand button (career) ── */
+[data-theme='dark'] .mc-expand-btn {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-muted) !important;
+}
+
+[data-theme='dark'] .mc-expand-btn:hover {
+  background: var(--border-color) !important;
+}
+
+/* ── Order buttons (university) ── */
+[data-theme='dark'] .mu-btn-order {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-muted) !important;
+}
+
+/* ── Page titles & headings ── */
+[data-theme='dark'] .mb-title,
+[data-theme='dark'] .mu-title,
+[data-theme='dark'] .mf-title,
+[data-theme='dark'] .mn-title,
+[data-theme='dark'] .adm-page-title,
+[data-theme='dark'] .cb-page-title,
+[data-theme='dark'] .users-header-title,
+[data-theme='dark'] .section-title {
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .mb-subtitle,
+[data-theme='dark'] .mu-subtitle,
+[data-theme='dark'] .mf-subtitle,
+[data-theme='dark'] .mn-subtitle,
+[data-theme='dark'] .adm-page-subtitle,
+[data-theme='dark'] .cb-page-subtitle,
+[data-theme='dark'] .users-header-subtitle {
+  color: var(--text-muted) !important;
+}
+
+/* ── Item titles & meta ── */
+[data-theme='dark'] .mb-item-title,
+[data-theme='dark'] .mu-item-title,
+[data-theme='dark'] .mc-cat-name,
+[data-theme='dark'] .mc-course-title {
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .mb-item-meta,
+[data-theme='dark'] .mu-item-meta,
+[data-theme='dark'] .mc-course-meta,
+[data-theme='dark'] .mc-cat-count {
+  color: var(--text-muted) !important;
+}
+
+[data-theme='dark'] .mc-cat-count {
+  background: var(--surface-2) !important;
+}
+
+/* ── Section borders ── */
+[data-theme='dark'] .mb-sec,
+[data-theme='dark'] .mu-sec,
+[data-theme='dark'] .mcd-sub-label {
+  border-color: var(--border-color) !important;
+}
+
+/* ── Form labels ── */
+[data-theme='dark'] .mb-label,
+[data-theme='dark'] .mu-label,
+[data-theme='dark'] .mn-form-label,
+[data-theme='dark'] .mf-form-label,
+[data-theme='dark'] .mb-sec-label,
+[data-theme='dark'] .mu-sec-label,
+[data-theme='dark'] .mc-courses-label {
+  color: var(--text-muted) !important;
+}
+
+/* ── Modal title / close ── */
+[data-theme='dark'] .mf-modal-title,
+[data-theme='dark'] .mn-modal-close {
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .mn-modal-close {
+  background: var(--surface-2) !important;
+}
+
+[data-theme='dark'] .mn-modal-section-title {
+  color: var(--text-muted) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* ── Adm / Cb unread rows ── */
+[data-theme='dark'] .adm-tr--unread,
+[data-theme='dark'] .cb-tr--unread {
+  background: rgba(246, 136, 31, 0.07) !important;
+}
+
+/* ── Breadcrumb ── */
+[data-theme='dark'] .breadcrumb-home {
+  background: var(--surface) !important;
+  color: var(--text-muted) !important;
+}
+
+[data-theme='dark'] .breadcrumb-current {
+  background: rgba(246, 136, 31, 0.15) !important;
+  color: var(--orange) !important;
+}
+
+/* ─────────────────────────────────────────
+   DARK THEME — DASHBOARD CHARTS
+───────────────────────────────────────── */
+
+/* Chart card background */
+[data-theme='dark'] .dashboard-chart-card {
+  background: var(--surface) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* Chart title text */
+[data-theme='dark'] .chart-title {
+  color: var(--text-main) !important;
+}
+
+/* Custom tooltip */
+[data-theme='dark'] .chart-tooltip {
+  background: #0f1117 !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Recharts axis lines & tick text */
+[data-theme='dark'] .recharts-cartesian-axis-tick-value {
+  fill: #64748b !important;
+}
+
+[data-theme='dark'] .recharts-cartesian-grid-horizontal line,
+[data-theme='dark'] .recharts-cartesian-grid-vertical line {
+  stroke: #2e3347 !important;
+}
+
+/* Recharts legend text */
+[data-theme='dark'] .recharts-legend-item-text {
+  color: var(--text-muted) !important;
+}
+
+/* Pie chart label text */
+[data-theme='dark'] .recharts-pie-label-text {
+  fill: var(--text-muted) !important;
+}
+
+/* Recharts tooltip cursor highlight */
+[data-theme='dark'] .recharts-rectangle.recharts-tooltip-cursor {
+  fill: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Recharts sector hover (pie) */
+[data-theme='dark'] .recharts-sector:focus {
+  outline: none;
+}
+
+/* Stat sub text */
+[data-theme='dark'] .stat-sub {
+  color: var(--text-light) !important;
+}
+
+/* ─────────────────────────────────────────
+   DARK THEME — MANAGE CENTRES
+───────────────────────────────────────── */
+
+[data-theme='dark'] .moc-card,
+[data-theme='dark'] .moc-form-container,
+[data-theme='dark'] .moc-city-section {
+  background: var(--surface) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .moc-title,
+[data-theme='dark'] .moc-form-header h3 {
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .moc-subtitle {
+  color: var(--text-muted) !important;
+}
+
+[data-theme='dark'] .moc-form-group label {
+  color: var(--text-muted) !important;
+}
+
+[data-theme='dark'] .moc-form-group input,
+[data-theme='dark'] .moc-form-group textarea,
+[data-theme='dark'] .moc-form-group select,
+[data-theme='dark'] .moc-file-input {
+  background: var(--input-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .moc-checkbox-label {
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .btn-cancel {
+  background: var(--surface-2) !important;
+  color: var(--text-muted) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .btn-cancel:hover {
+  background: var(--border-color) !important;
+}
+
+[data-theme='dark'] .btn-close-form {
+  color: var(--text-muted) !important;
+}
+
+[data-theme='dark'] .btn-close-form:hover {
+  background: rgba(229, 62, 62, 0.12) !important;
+  color: #fc8181 !important;
+}
+
+[data-theme='dark'] .moc-form-actions {
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .moc-table th {
+  background: var(--surface-2) !important;
+  color: var(--text-muted) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .moc-table td {
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .moc-table tr:hover td {
+  background: rgba(246, 136, 31, 0.06) !important;
+}
+
+[data-theme='dark'] .btn-edit-small {
+  background: rgba(49, 130, 206, 0.15) !important;
+  color: #63b3ed !important;
+}
+
+[data-theme='dark'] .btn-edit-small:hover {
+  background: rgba(49, 130, 206, 0.25) !important;
+}
+
+[data-theme='dark'] .btn-delete-small {
+  background: rgba(229, 62, 62, 0.12) !important;
+  color: #fc8181 !important;
+}
+
+[data-theme='dark'] .btn-delete-small:hover {
+  background: rgba(229, 62, 62, 0.22) !important;
+}
+
+[data-theme='dark'] .moc-image-preview,
+[data-theme='dark'] .moc-location-thumb,
+[data-theme='dark'] .moc-city-image-simple {
+  border-color: var(--border-color) !important;
+}
+
+/* City header gradient — dark theme ke liye different color */
+[data-theme='dark'] .moc-city-header-simple {
+  background: linear-gradient(135deg, #1e2235 0%, #252b40 100%) !important;
+}
+
+/* ─────────────────────────────────────────
+   DARK THEME — BOOTSTRAP & LMS UTILITY OVERRIDES
+───────────────────────────────────────── */
+[data-theme='dark'] .text-dark {
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .bg-light {
+  background-color: var(--surface-2) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .bg-white {
+  background-color: var(--surface) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .border,
+[data-theme='dark'] .border-top,
+[data-theme='dark'] .border-bottom,
+[data-theme='dark'] .border-start,
+[data-theme='dark'] .border-end {
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='dark'] .form-select,
+[data-theme='dark'] .form-control {
+  background-color: var(--input-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .form-select:focus,
+[data-theme='dark'] .form-control:focus {
+  border-color: var(--orange) !important;
+  box-shadow: 0 0 0 0.25rem rgba(246, 136, 31, 0.25) !important;
+}
+
+[data-theme='dark'] .form-select option {
+  background-color: var(--surface) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme='dark'] .bg-warning-subtle {
+  background-color: rgba(246, 136, 31, 0.15) !important;
+}
+
+[data-theme='dark'] .text-warning-emphasis {
+  color: #ffaa5a !important;
+}
+
+[data-theme='dark'] .bg-success-subtle {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+}
+
+[data-theme='dark'] .text-success-emphasis {
+  color: #34d399 !important;
+}
+
+[data-theme='dark'] .bg-danger-subtle {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+}
+
+[data-theme='dark'] .text-danger-emphasis {
+  color: #f87171 !important;
+}
+
+[data-theme='dark'] .badge.bg-light {
+  background-color: var(--surface-2) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+}
+

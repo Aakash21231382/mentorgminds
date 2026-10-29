@@ -1,0 +1,398 @@
+.program-hero-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 60px 0 80px;
+    overflow: hidden;
+  }
+  
+  .program-hero-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    box-sizing: border-box;
+  }
+  
+  .prog-hero-left {
+    flex: 1.1;
+  }
+  
+  .prog-hero-tag {
+    display: inline-block;
+    background: #137333;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+  }
+  
+  .prog-hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #191C1D;
+    line-height: 1.22;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+  
+  .prog-hero-title span {
+    color: #FF6E06;
+  }
+  
+  .prog-hero-desc {
+    font-size: 16px;
+    color: #564336;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 600px;
+  }
+  
+  /* Info Cards Grid */
+  /* .prog-info-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 35px;
+  }
+  
+  .prog-info-card {
+    background: #FFF5EB;
+    border: 1px solid #FFE9D3;
+    border-radius: 14px;
+    padding: 16px 22px;
+    min-width: 220px;
+    min-height: 75px;
+  }
+  
+  .prog-info-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #F58A20;
+  
+    letter-spacing: 0.5px;
+  }
+  
+  .prog-info-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1E293B;
+  } */
+
+
+  .prog-info-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+  }
+  
+  .prog-info-card {
+    background: #FFF5EB;
+    border: 1px solid #FFE9D3;
+    border-radius: 14px;
+    padding: 16px 22px;
+  
+    /* Dynamic width */
+    min-width: 0;
+    width: fit-content;
+  
+    /* Height content ke according */
+    min-height: 75px;
+    height: auto;
+  
+    box-sizing: border-box;
+  }
+  
+  .prog-info-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #F58A20;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  
+  .prog-info-value {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1E293B;
+  
+    /* Long dynamic text ke liye */
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  
+  .prog-hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-enquire {
+    border: 2px solid #F07500;
+    color: #FF6E06;
+    background: #FFFFFF;
+    padding: 12px 30px;
+    min-height: 48px;
+    height: auto;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .btn-enquire:hover {
+    background: #FFF5EB;
+  }
+  
+  .btn-apply-now {
+    background: #FF6E06;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 30px;
+    min-height: 48px;
+    height: auto;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 110, 6, 0.3);
+    transition: 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .btn-apply-now:hover {
+    background: #E05D00;
+  }
+  
+  .prog-urgency {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .prog-urgency span {
+    color: #F07500;
+  }
+  .prog-hero-right {
+    flex: 0.9;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .prog-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Background Circle 1 (Outer soft ring) */
+  .prog-image-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 580px;
+    height: 580px;
+    background: rgba(255, 235, 215, 0.45); /* Soft peach/orange tint */
+    border-radius: 50%;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Background Circle 2 (Inner darker ring / core glow) */
+  .prog-image-wrapper::after {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    background: rgba(255, 220, 195, 0.7);
+    border-radius: 50%;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .main-prog-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 7px solid #FFFFFF;
+    display: block;
+    position: relative;
+    z-index: 1; /* Image circles ke upar rahegi */
+  }
+  
+  /* Floating Review Card */
+  .prog-floating-card {
+    position: absolute;
+    bottom: 10px;
+    left: -20px;
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    border: 1px solid #E2E8F0;
+    max-width: 270px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    z-index: 2; /* Card sabse upar rahega */
+  }
+  
+  .floating-star {
+    font-size: 18px;
+    background: #EBF8FF;
+    padding: 8px;
+    color: #2563EB;
+    border-radius: 10px;
+  }
+  
+  .floating-title {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+  }
+  
+  .prog-floating-card p {
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+  
+  .prog-floating-card small {
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 40px;
+    color: #111827;
+  }
+  /* =========================================================
+   Responsive Adjustments (Tablet & Mobile)
+========================================================= */
+
+/* Tablet & Smaller Laptops */
+@media (max-width: 991px) {
+  .program-hero-container {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 40px;
+  }
+  
+  .prog-hero-left {
+    width: 100%;
+  }
+  
+  .prog-hero-right {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .prog-image-wrapper {
+    padding: 20px; /* Removed extra spacing on sides */
+  }
+
+  /* Shrink circles slightly for tablet */
+  .prog-image-wrapper::before {
+    width: 480px;
+    height: 480px;
+  }
+  
+  .prog-image-wrapper::after {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  
+  /* Fix Info Cards Overlap (image_ba6fa0.png) */
+  .prog-info-grid {
+    flex-wrap: wrap; /* Allows cards to wrap into next line */
+    gap: 12px;
+  }
+  
+  .prog-info-card {
+    flex: 1 1 calc(50% - 12px); /* Makes 2 cards per row */
+    min-width: 140px; /* Overrides 220px limit from desktop */
+    max-height: none; 
+    padding: 12px 16px;
+  }
+
+  /* Fix Buttons (image_ba6fa0.png) */
+  .prog-hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 12px;
+  }
+  
+  .btn-enquire, .btn-apply-now {
+    width: 100%; /* Take full width on mobile */
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Ensure urgency text aligns well if it breaks into two lines */
+  .prog-urgency {
+    align-items: flex-start;
+  }
+
+  /* Fix Background Circles (image_ba6cbb.png) */
+  /* Instead of fixed px, making it responsive to screen width */
+  .prog-image-wrapper::before {
+    width: 90vw; 
+    height: 90vw;
+    max-width: 380px;
+    max-height: 380px;
+  }
+  
+  .prog-image-wrapper::after {
+    width: 75vw;
+    height: 75vw;
+    max-width: 320px;
+    max-height: 320px;
+  }
+
+  /* Keep the image proportionally correct */
+  .main-prog-img {
+    height: auto;
+    min-height: 380px;
+    border-width: 4px; /* Thinner border for small screens */
+  }
+
+  /* Fix Floating Card Placement (image_ba6cbb.png) */
+  .prog-floating-card {
+    left: 50%;
+    transform: translateX(-50%); /* Centers the card over the image */
+    bottom: -30px;
+    width: 90%;
+    max-width: 320px; /* Prevents it from going out of bounds */
+  }
+}

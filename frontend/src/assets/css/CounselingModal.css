@@ -1,0 +1,314 @@
+/* ✅ Counseling Modal Styles */
+
+.counseling-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.counseling-modal-content {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.counseling-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+/* 
+.counseling-modal-close:hover {
+  background: #f5f5f5;
+  color: #333;
+  transform: rotate(90deg);
+} */
+
+.counseling-modal-header {
+  padding: 40px 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #F07500 0%, #ff9d3d 100%);
+  color: #fff;
+  border-radius: 16px 16px 0 0;
+  flex-shrink: 0; /* Don't shrink header */
+}
+
+.counseling-modal-header h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.counseling-modal-header p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+.counseling-modal-form {
+  padding: 30px 40px 40px;
+  overflow-y: auto; /* Scroll inside form only */
+  flex: 1; /* Take remaining space */
+}
+
+/* Custom scrollbar for form */
+.counseling-modal-form::-webkit-scrollbar {
+  width: 8px;
+}
+
+.counseling-modal-form::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.counseling-modal-form::-webkit-scrollbar-thumb {
+  background: #F07500;
+  border-radius: 4px;
+}
+
+.counseling-modal-form::-webkit-scrollbar-thumb:hover {
+  background: #d96700;
+}
+
+.counseling-form-group {
+  margin-bottom: 20px;
+}
+
+.counseling-form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.counseling-form-group label svg {
+  color: #F07500;
+  font-size: 16px;
+}
+
+.counseling-form-group .required {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+.counseling-form-group input,
+.counseling-form-group select,
+.counseling-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.counseling-form-group input:focus,
+.counseling-form-group select:focus,
+.counseling-form-group textarea:focus {
+  outline: none;
+  border-color: #F07500;
+  box-shadow: 0 0 0 4px rgba(240, 117, 0, 0.1);
+}
+
+.counseling-form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.counseling-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.counseling-submit-btn {
+  width: 100%;
+  padding: 14px 24px;
+  min-height: 48px;
+  height: auto;
+  background: #F07500;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counseling-submit-btn:hover:not(:disabled) {
+  background: #d66800;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(240, 117, 0, 0.3);
+}
+
+.counseling-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.counseling-privacy-note {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+.counseling-error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  border-left: 4px solid #c62828;
+}
+
+.counseling-success-message {
+  padding: 60px 40px;
+  text-align: center;
+  animation: successFade 0.5s ease;
+  flex-shrink: 0; /* Don't shrink success message */
+}
+
+@keyframes successFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.counseling-success-message .success-icon {
+  width: 80px;
+  height: 80px;
+  background: #4caf50;
+  color: #fff;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  animation: successPulse 0.6s ease;
+}
+
+@keyframes successPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.counseling-success-message h3 {
+  color: #333;
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+.counseling-success-message p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .counseling-modal-overlay {
+    padding: 10px;
+  }
+
+  .counseling-modal-content {
+    max-width: 100%;
+    max-height: 95vh;
+  }
+
+  .counseling-modal-header {
+    padding: 30px 20px 16px;
+  }
+
+  .counseling-modal-header h2 {
+    font-size: 22px;
+  }
+
+  .counseling-modal-header p {
+    font-size: 14px;
+  }
+
+  .counseling-modal-form {
+    padding: 20px;
+  }
+
+  .counseling-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .counseling-success-message {
+    padding: 40px 20px;
+  }
+}

@@ -1,0 +1,232 @@
+.smart-study-wrapper {
+    width: 100%;
+    background-color: #defff6;
+    color: #ffffff;
+    padding: 80px 24px;
+  }
+  
+  .smart-study-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+  }
+  
+  /* Left Section */
+  .smart-study-left {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .smart-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #191C1d;
+  }
+  .smart-title span {
+    color: #F5891F;
+  }
+  
+  .highlight-text {
+    color: #F5891F;
+    font-weight: 700;
+  }
+  
+  .smart-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #191C1d;
+    margin-bottom: 36px;
+  }
+  
+  /* Action Buttons */
+  .smart-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #F5891F;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  
+  
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #191C1d;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+   transition: all 1s ease;
+  }
+  
+  .btn-secondary:hover {
+    color: #F5891F;
+    translate: 0px 0px 10px;
+  }
+  
+  .arrow {
+    font-size: 18px;
+    line-height: 1;
+  }
+  
+  /* Right Grid & Dual Cards */
+  .smart-study-grid {
+    flex: 1.1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .dual-card {
+    display: flex;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    min-height: 115px;
+    background-color: #12090b;
+  }
+  
+  /* Left Half of Card */
+  .dual-card-left {
+    flex: 0.9;
+    background: radial-gradient(circle at top left, #380d15, #110508);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .dual-card-left h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Right Half of Card */
+  .dual-card-right {
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .dual-card-right p {
+    font-size: 13px;
+    line-height: 1.45;
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  /* Color Themes */
+  .theme-green {
+    background: radial-gradient(circle at center, #00875a, #005f3e);
+  }
+  
+  .theme-orange {
+    background: radial-gradient(circle at center, #d97706, #b45309);
+  }
+  
+  .theme-amber {
+    background: radial-gradient(circle at center, #ea580c, #c2410c);
+  }
+  
+  .theme-red {
+    background: radial-gradient(circle at center, #dc2626, #b91c1c);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .smart-study-wrapper {
+      padding: 50px 20px;
+    }
+
+    .smart-study-container {
+      flex-direction: column;
+      text-align: left;
+      gap: 36px;
+    }
+  
+    .smart-study-left {
+      max-width: 100%;
+    }
+  
+    .smart-study-grid {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .smart-study-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .smart-cta-group {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .smart-study-wrapper {
+      padding: 36px 12px;
+    }
+
+    .smart-title {
+      font-size: 26px;
+      margin-bottom: 14px;
+    }
+
+    .smart-desc {
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .dual-card-left h3 {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 359px) {
+    .smart-study-wrapper {
+      padding: 24px 8px;
+    }
+
+    .smart-title {
+      font-size: 22px;
+    }
+
+    .dual-card {
+      flex-direction: column;
+      min-height: auto;
+    }
+
+    .dual-card-left {
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px;
+    }
+  }

@@ -1,0 +1,1282 @@
+/* =====================================================
+   SECTION 1: Alumni Companies Strip
+===================================================== */
+.alumni-strip-section {
+  width: 100%;
+  padding: 50px 0;
+  background: #ffffff;
+  
+}
+
+.alumni-strip-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 10px;
+}
+
+.alumni-logos-grid {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 25px 35px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.alumni-logos-grid-tem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 15px 25px;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+}
+
+.alumni-logo-item img {
+  height: 42px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+ 
+}
+
+.alumni-comp-fallback {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+
+.tool-icon-fallback {
+  font-size: 24px;
+}
+
+.alumni-logo-item img:hover {
+  opacity: 1;
+}
+
+/* =====================================================
+   SECTION 2: Legacy That Nurtures Excellence
+===================================================== */
+.legacy-section {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.legacy-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.legacy-heading h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.legacy-heading h2 span {
+  color: #F07500;
+}
+
+.legacy-heading p {
+  font-size: 16px;
+  color: #564336;
+  font: 400;
+  line-height: 1.6;
+}
+
+.legacy-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.legacy-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 35px 30px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Card ke items ko horizontally center karne ke liye */
+  text-align: center;   /* Text ko center align karne ke liye */
+}
+
+.legacy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.legacy-icon-box {
+  width: 60px;
+  height: 60px;
+  background: #FEF2F2;
+  color: #E05D00;
+  border: 1px solid #FFE8D6;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.legacy-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 12px;
+}
+
+.legacy-card p {
+  font-size: 14px;
+  color: #564336;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =====================================================
+   SECTION 3: From Full Stack to AI-Native Systems
+===================================================== */
+.ai-systems-section {
+  width: 100%;
+  padding: 50px 0;
+  background: #FFFFFF;
+}
+
+.ai-systems-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.ai-systems-left {
+  flex: 1.1;
+}
+
+.ai-systems-left h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.ai-subtext {
+  font-size: 16px;
+  color:#564336;
+  margin-bottom: 35px;
+}
+
+.highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.hl-icon {
+  width: 44px;
+  height: 44px;
+  /* background: #FFF9F5; */
+  border-radius: 10px;
+  color:#FF6E06;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.highlight-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.highlight-item p {
+  font-size: 14px;
+  color: #564336;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Right Side Stats & Promo */
+.ai-systems-right {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stats-row {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #FFF9F5;
+  border: 1px solid #FFE8D6;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: left;
+  min-height: 100px;
+}
+
+.stat-card h3 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #FF6E06;
+  margin-bottom: 6px;
+}
+
+.stat-card span {
+  font-size: 12px;
+  font-weight: 700;
+  color:#564336;
+  letter-spacing: 0.5px;
+}
+
+.orange-promo-card {
+  background: linear-gradient(135deg, #FF6E06 0%, #E05D00 100%);
+  border-radius: 20px;
+  padding: 35px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden; /* Design card ke andar hi rahega */
+  /* box-shadow: 0 15px 35px rgba(255, 110, 6, 0.25); */
+}
+
+/* Outer Concentric Circle */
+.orange-promo-card::before {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -60px;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Inner Concentric Circle */
+.orange-promo-card::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #FF6E06 0%, #E05D00 100%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Center Tilted Rounded Square Shape (Figma exact match) */
+.orange-promo-card .card-shape-box {
+  position: absolute;
+  right: 75px;
+  bottom: 65px;
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  transform: rotate(15deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orange-promo-card h3,
+.orange-promo-card p,
+.orange-promo-card .btn-learn-stack {
+  position: relative;
+  z-index: 1; /* Text hamesha background shapes ke upar rahega */
+}
+
+.orange-promo-card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.orange-promo-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 25px;
+}
+
+.btn-learn-stack {
+  display: inline-block;
+  background: #FFFFFF;
+  color: #FF6E06;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn-learn-stack:hover {
+  background: #FFF5EB;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .ai-systems-container {
+    flex-direction: column;
+  }
+  .legacy-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .alumni-logos-grid {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+/* =====================================================
+   SECTION: Quick Program Highlights
+===================================================== */
+.quick-highlights-section {
+  width: 100%;
+  padding: 50px 0;
+  background: #FFFFFF;
+}
+
+.quick-highlights-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.quick-highlights-heading h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color:#111827;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.quick-highlights-heading h2 span {
+  color: #FF6E06;
+}
+
+.quick-highlights-heading p {
+  font-size: 15px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.quick-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.quick-highlight-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.quick-highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  border-color: #FFE8D6;
+}
+
+.qh-icon-box {
+  width: 50px;
+  height: 50px;
+  background: #FFF9F5;
+  border: 1px solid #FFE8D6;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #FF6E06;
+  margin-bottom: 18px;
+}
+
+.qh-label {
+  font-size: 14px;
+  color: #64748B;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.qh-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+/* Responsive for Tablets / Mobile */
+@media (max-width: 991px) {
+  .quick-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .quick-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+/* =====================================================
+   SECTION: Program Learning Journey (Updated Classes)
+===================================================== */
+.custom-journey-section {
+  width: 100%;
+  padding: 40px 0 10px 0 !important;
+  background: #FFFFFF;
+}
+
+.custom-journey-heading {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 30px auto !important;
+}
+
+.custom-journey-heading h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.custom-journey-heading h2 span {
+  color: #FF6E06;
+}
+
+.custom-journey-heading p {
+  font-size: 15px;
+  color: #64748B;
+  margin: 0;
+}
+
+/* Timeline Wrapper Container */
+.custom-timeline-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+/* Thin vertical grey line passing through dots */
+.custom-timeline-line {
+  position: absolute;
+  left: 12px;
+  top: 40px;
+  bottom: 40px;
+  width: 3px;
+  background: #E2E8F0; 
+  z-index: 1;
+}
+
+.custom-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 0 !important;
+}
+
+.custom-card-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Solid orange dot with clean styling */
+.custom-timeline-dot {
+  position: absolute;
+  left: -42px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: #FF6E06;
+  border: none;
+  border-radius: 50%;
+  box-shadow: none;
+  z-index: 3;
+}
+
+.custom-content-box {
+  width: 100%;
+  max-width: 100%;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 22px 28px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  transition: 0.2s ease;
+}
+
+.custom-content-box:hover {
+  border-color: #FF6E06;
+  background: #FFF9F5;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+}
+
+.custom-month-text {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #FF6E06;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.custom-content-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1E293B;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .custom-timeline-wrap {
+    padding-left: 35px;
+  }
+  .custom-timeline-line {
+
+    left: 7px;
+  
+  }
+  .custom-timeline-dot {
+    left: -33px;
+    width: 12px;
+    height: 12px;
+  }
+  .custom-content-box {
+    padding: 18px 20px;
+  }
+  .custom-content-box h3 {
+    font-size: 16px;
+  }
+}
+
+
+/* =====================================================
+   SECTION: Detailed Curriculum (Accordion)
+===================================================== */
+.curriculum-section.accordion-curriculum {
+  width: 100%;
+  padding: 60px 0 !important;
+  background: #FFFFFF;
+  min-height: unset !important;
+  margin-top: 0 !important;
+}
+
+.circulam {
+  overflow: visible;
+}
+
+.curriculum-heading {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto 50px;
+}
+
+.curriculum-heading h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.curriculum-heading h2 span {
+  color: #FF6E06;
+}
+
+.curriculum-heading p {
+  font-size: 15px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.curriculum-accordion-list {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.curriculum-accordion-item {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.curriculum-accordion-item.active {
+  border-color: #FF6E06;
+  box-shadow: 0 4px 20px rgba(255, 110, 6, 0.08);
+}
+
+.accordion-header {
+  padding: 26px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #FFFFFF;
+}
+
+.accordion-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.accordion-icon {
+  font-size: 18px;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+}
+
+/* Yahan padding theek ki hai taaki left se chipke nahi */
+.accordion-body {
+  padding: 12px 36px 36px 36px;
+  border-top: 1px solid #F1F5F9;
+  height: 220px; /* Yahan aap apne mutabiq fixed height set kar sakte hain taaki bilkul na hile */
+  overflow-y: auto; /* Agar content zyada ho toh andar scroll aa jayega, height fix rahegi */
+}
+
+.learning-obj-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94A3B8;
+  letter-spacing: 0.8px;
+  margin-bottom: 22px;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+/* Column-wise grid with proper left indentation */
+.objectives-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, auto);
+  gap: 16px 60px;
+  padding-left: 40px;
+  padding-bottom: 30px; /* Left side se proper spacing ke liye */
+}
+
+.objective-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  color: #111827;
+  font-weight: 400;
+}
+
+/* Proper hollow circle bullet style */
+.bullet-circle {
+  width: 6px;
+  height: 6px;
+  border: 1.5px solid #64748B;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .objectives-grid {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    padding-left: 0;
+  }
+  .accordion-header h3 {
+    font-size: 16px;
+  }
+  .accordion-header, .accordion-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+
+/* =====================================================
+   SECTION: Real-World Projects - Perfect Fix
+===================================================== */
+.real-world-projects-section {
+  width: 100%;
+  padding: 80px 0;
+  background: #F9FAFB;
+}
+
+.projects-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.projects-heading h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.projects-heading h2 span {
+  color: #FF6E06;
+}
+
+.projects-heading p {
+  font-size: 16px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.projects-grid {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 24px 28px; /* Padding thodi balanced ki */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: #FF6E06;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 110, 6, 0.08);
+}
+
+/* Header row: Tag left par, Icon right par fix */
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* margin-bottom: 15px; Gap ko 25px se hata kar 15px kar diya taaki upar-neeche paas rahein */
+}
+.project-tag {
+  background: #EEF2FF;
+  color: #4F46E5;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.project-icon-box {
+  width: 32px;
+  height: 32px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748B;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.project-content-area h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  /* margin-bottom: 12px;  */
+  line-height: 1.3;
+}
+
+.project-content-area p {
+  font-size: 12px;
+  color: #6B7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* =====================================================
+   SECTION: Industry Capstone Projects
+===================================================== */
+.capstone-projects-section {
+  width: 100%;
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.capstone-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.capstone-heading h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.capstone-heading h2 span {
+  color: #FF6E06;
+}
+
+.capstone-heading p {
+  font-size: 15px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.capstone-grid {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Sabhi cards normal ek jaise dikhenge */
+.capstone-card {
+  background:#FFF9F4;
+  border: 1px solid #FFE6D5;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+/* Sirf click karne par active/orange border aayega */
+.capstone-card.active {
+  background: #FFFDFB;
+  border-color: #FF6E06;
+  box-shadow: 0 4px 20px rgba(255, 110, 6, 0.08);
+}
+
+.capstone-card:hover {
+  border-color: #CBD5E1;
+  transform: translateY(-4px);
+}
+
+.capstone-card-top {
+  margin-bottom: 24px;
+}
+
+.capstone-icon-box {
+  width: 48px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.capstone-category {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: #9CA3AF;
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+}
+
+.capstone-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.capstone-content p {
+  font-size: 12px;
+  color: #6B7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .capstone-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .capstone-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   SECTION: Learn From The Best (Carousel)
+===================================================== */
+.learn-from-best-section {
+  width: 100%;
+  padding: 50px 0;
+  background: #FFFFFF;
+}
+
+.best-heading {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto 50px;
+}
+
+.best-heading h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+/* 
+.best-heading h2 span {
+  color: #FF6E06;
+} */
+
+.best-heading p {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0;
+}
+.mentors-slider-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 60px; /* Dots ke liye neeche space */
+}
+/* Mentor Card Styling */
+.mentor-card {
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 35px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.mentor-card:hover {
+  transform: translateY(-5px);
+}
+
+.mentor-img-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.mentor-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mentor-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 8px;
+}
+
+.mentor-card p {
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  min-height: 40px;
+}
+
+.mentor-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0A66C2;
+  text-decoration: none;
+  /* background: #FFFFFF; */
+  padding: 6px 14px;
+  /* border-radius: 20px; */
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04); */
+  transition: all 0.2s ease;
+}
+
+/* .mentor-linkedin:hover {
+  background: #0A66C2;
+  color: #FFFFFF;
+} */
+
+.linkedin-icon {
+  font-size: 14px;
+}
+
+/* Swiper Custom Pagination Dots (Orange active dot) */
+
+
+.swiper-pagination {
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 35px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.swiper-pagination-bullet {
+  background: #CBD5E1 !important;
+  opacity: 1 !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+  margin: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FF6E06 !important;
+  width: 24px !important;
+  border-radius: 4px !important;
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+   SECTION: A Credential That Carries Weight
+===================================================== */
+.credential-section {
+  width: 100%;
+  padding: 80px 0;
+  background: #F8F9FA;
+}
+
+.credential-heading {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto 50px;
+}
+
+.credential-heading h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.credential-heading h2 span {
+  color:#FF6E06;
+}
+
+.credential-heading p {
+  font-size: 16px;
+  color:#564336;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Main Wrapper Box - Overflow hidden taaki image corner se rounded rahe */
+.credential-card-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 24px;
+  overflow: hidden; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.credential-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: stretch; /* Dono columns ki height barabar rahegi */
+}
+
+/* Left Features with padding */
+.credential-features {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.credential-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.credential-icon-box {
+  width: 40px;
+  height: 40px;
+  background: #FEF2F2;
+  border: 1px solid #F8CBB8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF6E06;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.credential-text h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 6px;
+}
+
+.credential-text p {
+  font-size: 14px;
+  color: #666666;
+  padding-top: 5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Right Image Box - Pura area cover karega */
+.credential-image-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.credential-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image bina stretch hue poora area bhr degi */
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .credential-grid {
+    grid-template-columns: 1fr;
+  }
+  .credential-features {
+    padding: 30px 24px;
+  }
+  .credential-image-box {
+    min-height: 300px;
+  }
+  .credential-heading h2 {
+    font-size: 32px;
+  }
+}

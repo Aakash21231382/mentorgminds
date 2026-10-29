@@ -1,0 +1,397 @@
+/* =========================================
+   ADMISSIONS PAGE - PREMIUM STYLES
+   Prefix: adm-
+========================================= */
+
+:root {
+  --orange: #F6881F;
+  --orange-light: #fff8f0;
+  --orange-dark: #e07010;
+  --text-main: #1a202c;
+  --text-sub: #4a5568;
+  --text-muted: #718096;
+  --border: #e2e8f0;
+  --bg-page: #f7fafc;
+  --bg-card: #ffffff;
+  --success: #48bb78;
+  --danger: #e53e3e;
+  --info: #3182ce;
+}
+
+/* --- Page Layout --- */
+.adm-page {
+  padding: 24px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.adm-page-header {
+  margin-bottom: 16px;
+}
+
+.adm-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.adm-title-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.adm-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #F6881F, #e67d1a);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.adm-page-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #2d3748;
+}
+
+.adm-page-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.adm-unread-badge {
+  background: var(--orange);
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* --- Toolbar --- */
+.adm-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.adm-filter-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.adm-filter-btn {
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-page);
+  color: var(--text-sub);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.adm-filter-btn:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.adm-filter-btn--active {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+  font-weight: 700;
+}
+
+.adm-filter-btn-sm {
+  padding: 5px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-page);
+  color: var(--text-sub);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.adm-filter-btn-sm:hover {
+  border-color: #2d3748;
+  color: #2d3748;
+}
+
+.adm-filter-btn-sm--active {
+  background: #2d3748;
+  color: #fff;
+  border-color: #2d3748;
+  font-weight: 700;
+}
+
+/* --- Stats Bar --- */
+.adm-stats-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.adm-stat-card {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #edf2f7;
+}
+
+.adm-stat-label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.adm-stat-count {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* --- Table Card --- */
+.adm-card {
+  background: var(--bg-card);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.adm-loading {
+  padding: 60px;
+  text-align: center;
+  color: #a0aec0;
+  font-size: 15px;
+}
+
+.adm-empty {
+  padding: 60px;
+  text-align: center;
+  color: #a0aec0;
+}
+
+.adm-empty-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  color: var(--border);
+  display: block;
+}
+
+.adm-table-wrap {
+  overflow-x: auto;
+}
+
+.adm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.adm-table th {
+  padding: 12px 14px;
+  text-align: left;
+  background: var(--bg-page);
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #edf2f7;
+  white-space: nowrap;
+}
+
+.adm-tr {
+  border-bottom: 1px solid var(--bg-page);
+  transition: background 0.15s;
+}
+
+.adm-tr:hover {
+  background: #fafbfc;
+}
+
+.adm-tr--unread {
+  background: #fffaf4;
+}
+
+.adm-td {
+  padding: 12px 14px;
+  color: #2d3748;
+  vertical-align: middle;
+}
+
+.adm-td--bold {
+  font-weight: 700;
+}
+
+.adm-link {
+  color: var(--orange);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.adm-link:hover {
+  text-decoration: underline;
+}
+
+.adm-muted {
+  color: #a0aec0;
+}
+
+.adm-course-tag {
+  background: #ebf8ff;
+  color: #2b6cb0;
+  border-radius: 12px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.adm-date-cell {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  gap: 4px;
+}
+
+.adm-date-icon {
+  color: #a0aec0;
+}
+
+.adm-status-select {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.adm-status-select:focus {
+  border-color: var(--orange);
+}
+
+.adm-status-read {
+  background: #f0fff4;
+  color: #38a169;
+  border-radius: 12px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.adm-status-unread {
+  background: #fffaf0;
+  color: var(--orange);
+  border-radius: 12px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.adm-action-btn {
+  background: var(--orange);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.adm-action-btn:hover {
+  background: var(--orange-dark);
+}
+
+/* =========================================
+   ADMISSIONS — MOBILE RESPONSIVE
+========================================= */
+@media (max-width: 768px) {
+  .adm-page {
+    padding: 16px;
+  }
+
+  .adm-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .adm-stats-bar {
+    gap: 8px;
+  }
+
+  .adm-stat-card {
+    min-width: calc(50% - 4px);
+    padding: 10px;
+  }
+
+  .adm-stat-count {
+    font-size: 22px;
+  }
+
+  .adm-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .adm-filter-group {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .adm-stat-card {
+    min-width: 100%;
+  }
+
+  .adm-icon-box {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .adm-page-title {
+    font-size: 18px;
+  }
+
+  /* Table horizontal scroll */
+  .adm-table-wrap {
+    overflow-x: auto;
+  }
+
+  .adm-table {
+    min-width: 560px;
+  }
+}

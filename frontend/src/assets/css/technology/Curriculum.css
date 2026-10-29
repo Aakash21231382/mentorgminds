@@ -1,0 +1,342 @@
+/* =====================================================
+   CURRICULUM TIMELINE SECTION (Desktop Height 1380px)
+===================================================== */
+.curriculum-section {
+  width: 100%;
+  background: #F7FBFF;
+  padding: 80px 0;
+  min-height: 1380px; /* Exact desktop height requested */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.curriculum-header {
+  margin-bottom: 100px;
+}
+
+.curriculum-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  font: bold;
+  color: #1A1A1A;
+  line-height: 56px;
+  letter-spacing: -1.2px;
+  align-items: center;
+  text-align: center;
+}
+
+.curriculum-header h2 span {
+  color: #FF6E06;
+}
+
+/* Timeline Wrapper (Absolute positioning base) */
+.timeline-wrapper {
+  position: relative;
+  max-width: 1000px;
+  height: 900px; /* Fixed height for exact node placement */
+  margin: 0 auto;
+}
+
+/* =====================================================
+   STRICT CENTER LINE (1 ke center se 4 ke center tak locked)
+===================================================== */
+.timeline-center-line {
+  position: absolute;
+  top: 150px;    /* Exact center of Node 1 (50px height ka half) */
+  bottom: 150px; /* Exact center of Node 4 (50px height ka half) */
+  left: 50%;
+  width: 2px;
+  background: #E2E8F0;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* =====================================================
+   EXACT ABSOLUTE POSITIONING FOR CARDS & NODES (1 to 4)
+===================================================== */
+.timeline-row {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Node 1 (Top) */
+.timeline-row.item-1 {
+  top: 0px;
+}
+/* Node 2 */
+.timeline-row.item-2 {
+  top: 220px;
+}
+/* Node 3 */
+.timeline-row.item-3 {
+  top: 420px;
+}
+/* Node 4 (Bottom) */
+.timeline-row.item-4 {
+  top: 620px;
+}
+
+/* Alternating Layout (Left & Right Cards) */
+.timeline-row.item-1,
+.timeline-row.item-3 {
+  flex-direction: row;
+}
+
+.timeline-row.item-2,
+.timeline-row.item-4 {
+  flex-direction: row-reverse;
+}
+
+/* Timeline Cards */
+.curriculum-card {
+  width: 40%;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eaeaea;
+  position: relative;
+}
+
+.white-card {
+  background: #ffffff;
+}
+
+.peach-card {
+  background: #FFF5EE;
+  border: 1px solid #FAD5C5;
+}
+
+.blue-card {
+  background: #EEF8FF;
+  border: 1px solid #C7DCEC;
+}
+
+.curriculum-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  font: bold;
+  color: #191C1D;
+  margin-bottom: 20px;
+}
+
+.curriculum-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.curriculum-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #434344;
+  
+  line-height: 20px;
+}
+
+.curr-check-icon {
+  color: #F07500;
+  font-size: 16px;
+  height: 20px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Center Number Node Bubble */
+.timeline-number-node {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border: 2px solid #E2E8F0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  z-index: 3;
+}
+
+/* =====================================================
+   CONNECTOR LINES — dynamic (left cards = row, right = row-reverse)
+===================================================== */
+/* Left-side cards (flex-direction: row) — connector goes right */
+.timeline-row[style*="row"] .curriculum-card::after,
+.timeline-row[style*="row:"] .curriculum-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -18.5%;
+  width: 18.5%;
+  height: 2px;
+  background: #E2E8F0;
+  z-index: 1;
+}
+
+.timeline-row[style*="row"] .curriculum-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -8.0px;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  background: #CBD5E1;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+/* Right-side cards (flex-direction: row-reverse) — connector goes left */
+.timeline-row[style*="row-reverse"] .curriculum-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -18.5%;
+  width: 18.5%;
+  height: 2px;
+  background: #E2E8F0;
+  z-index: 1;
+}
+
+.timeline-row[style*="row-reverse"] .curriculum-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8.0px;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  background: #CBD5E1;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+/* Node dot — left card node */
+.node-left::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #CBD5E1;
+  border-radius: 50%;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+/* Node dot — right card node */
+.node-right::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #CBD5E1;
+  border-radius: 50%;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+/* Bottom Download Syllabus Button */
+.curriculum-btn-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.download-syllabus-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #F07500;
+  color: #ffffff;
+  border: none;
+  max-height: 45px;
+  border-radius: 12px;
+  padding: 18px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  font: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(240, 117, 0, 0.25);
+}
+
+.download-syllabus-btn:hover {
+  background: #d66800;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN (Mobile & Tablet)
+===================================================== */
+@media (max-width: 992px) {
+  .curriculum-section {
+    min-height: auto;
+    padding: 70px 0;
+  }
+  .timeline-wrapper {
+    height: auto;
+  }
+  .timeline-center-line {
+    left: 30px;
+    top: 25px;
+    bottom: 25px;
+  }
+  .timeline-number-node {
+    left: 30px;
+    margin-top: 30px;
+  }
+  .timeline-row {
+    position: relative !important;
+    top: auto !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    margin-bottom: 30px;
+  }
+  .curriculum-card {
+    width: 85%;
+  }
+  .curriculum-card::after,
+  .curriculum-card::before,
+  .timeline-number-node::before {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .curriculum-header h2 {
+    font-size: 28px;
+  }
+  .timeline-center-line {
+    display: none;
+   
+  }
+  .timeline-number-node {
+    position: static;
+    transform: none;
+    margin-bottom: 0px;
+  }
+  .timeline-row {
+    align-items: center !important;
+  }
+  .curriculum-card {
+    width: 100%;
+  }
+}

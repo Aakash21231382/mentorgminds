@@ -1,0 +1,591 @@
+/* =====================================================
+   SECTION: Your Career Support Journey
+===================================================== */
+.career-journey-section {
+  width: 100%;
+  padding: 50px 0;
+  background: #FFFFFF;
+}
+
+.career-journey-header {
+  text-align: center;
+ 
+  margin: 0 auto 60px;
+}
+
+.career-journey-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.career-journey-header h2 span {
+  color: #F07500;
+}
+
+.career-journey-header p {
+  font-size: 16px;
+  color: #564336;
+  margin: 0;
+}
+
+/* Timeline Container */
+.journey-timeline {
+  max-width: 100%;
+  margin: 0 auto 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  /* padding: 0 20px; */
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  flex: 1;
+}
+
+.timeline-node-wrapper {
+  margin-bottom: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.timeline-dot {
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #1E293B;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  z-index: 2;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Active 7th step style */
+.timeline-dot.active {
+  background: #FF6E06;
+  border-color: #FF6E06;
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(255, 110, 6, 0.35);
+}
+
+/* Curved Dotted Arrow SVG Styling */
+.curved-arrow {
+  position: absolute;
+  top: 5px;
+  left: 60%; 
+  width: 130px;
+  height: 35px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.timeline-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.4;
+}
+
+/* Stats Cards Grid */
+.journey-stats-grid {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.stat-card {
+  background: #FFF9F4;
+  border: 1px solid #F07500;
+  border-radius: 12px;
+  padding: 30px 15px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(255, 110, 6, 0.04);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(255, 110, 6, 0.08);
+}
+
+.stat-card h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #F6881F;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.stat-card p {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .journey-timeline {
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 60px;
+    padding-bottom: 20px;
+  }
+  .curved-arrow {
+    width: 70px;
+  }
+  .journey-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .journey-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   SECTION: Success Stories
+===================================================== */
+.success-stories-section {
+  width: 100%;
+  padding: 50px 0;
+  background: #FFFFFF;
+}
+
+.success-stories-header {
+  text-align: center;
+  margin: 0 auto 50px;
+}
+
+.success-stories-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.success-stories-header h2 span {
+  color: #F07500;
+}
+
+.success-stories-header p {
+  font-size: 16px;
+  color:#564336;
+  margin: 0;
+}
+
+/* Stories Grid */
+.stories-grid {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 20px;
+    align-items: start;
+  }
+
+/* Individual Story Card */
+.story-card {
+    background: #FFFFFF;
+    border: 1.5px solid #D3D3D3;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px; /* Author row aur quote ke beech ka normal gap */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    height: auto;
+  }
+  .story-card:hover {
+    transform: translateY(-4px);
+    border-color: #CBD5E1;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .story-author-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 0;
+  }
+  .story-author-row img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .story-author-info h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2px;
+  }
+  
+  .story-author-info span {
+    font-size: 13px;
+    color: #64748B;
+    font-weight: 500;
+  }
+
+  .story-quote {
+    font-size: 15px;
+    color: #4B5563;
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+  }
+/* Responsive */
+@media (max-width: 1024px) {
+  .stories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+  .success-stories-header h2 {
+    font-size: 36px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   SECTION: The Learning Experience
+===================================================== */
+.learning-experience-section {
+  width: 100%;
+  padding: 50px 0;
+  background: #FFFFFF;
+}
+
+.learning-header {
+  text-align: center;
+  margin: 0 auto 50px;
+}
+
+.learning-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.learning-header h2 span {
+  color: #F07500;
+}
+
+.learning-header p {
+  font-size: 16px;
+  color: #564336;
+  margin: 0;
+}
+
+/* Grid Layout */
+.learning-grid {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 20px;
+}
+
+/* Individual Card */
+.learning-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 24px;
+  padding: 40px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.learning-card:hover {
+  transform: translateY(-4px);
+  border-color: #CBD5E1;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Box */
+.learning-icon-box {
+  width: 56px;
+  height: 56px;
+  background: #F9FAFB;
+  border: 1px solid #F8CBB8;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F07500;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.learning-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #191C1D;
+  margin-bottom: 12px;
+}
+
+.learning-card p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+  .learning-header h2 {
+    font-size: 36px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   SECTION: Ready to lead the AI revolution? (CTA)
+===================================================== */
+.ai-revolution-section {
+  width: 100%;
+  padding: 60px 0 100px 0;
+  background: #FFFFFF;
+}
+
+.ai-cta-card {
+  max-width: 100%;
+  margin: 0 auto;
+
+
+
+  /* padding: 60px 20px; */
+  text-align: center;
+
+}
+
+.ai-cta-card h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.ai-cta-card h2 span {
+  color: #F07500;
+}
+
+.ai-cta-card p {
+  font-size: 16px;
+  color: #564336;
+  margin-bottom: 30px;
+}
+
+/* Action Buttons */
+.ai-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.btn-outline {
+  background: #FFFFFF;
+  border: 1.5px solid #F07500;
+  color: #F07500;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #FFF5EE;
+}
+
+.btn-solid {
+  background: #F07500;
+  border: 1.5px solid #F07500;
+  color: #FFFFFF;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(240, 117, 0, 0.3);
+}
+
+.btn-solid:hover {
+  background: #D86800;
+}
+
+/* Contact Helpline */
+.ai-cta-help {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #564336;
+}
+
+.phone-icon {
+  color:#564336;
+  font-size: 13px;
+}
+
+.ai-cta-help strong {
+  color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .career-journey-header h2,
+  .success-stories-header h2,
+  .learning-header h2,
+  .ai-cta-card h2 {
+    font-size: 32px;
+  }
+  .ai-cta-buttons {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .career-journey-section,
+  .success-stories-section,
+  .learning-experience-section,
+  .ai-revolution-section {
+    padding: 36px 0;
+  }
+
+  .career-journey-header,
+  .success-stories-header,
+  .learning-header,
+  .ai-cta-card {
+    margin-bottom: 30px;
+    padding: 0 12px;
+  }
+
+  .career-journey-header h2,
+  .success-stories-header h2,
+  .learning-header h2,
+  .ai-cta-card h2 {
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+
+  .journey-timeline {
+    gap: 30px;
+    padding: 0 10px 16px;
+  }
+
+  .journey-stats-grid,
+  .stories-grid,
+  .learning-grid {
+    padding: 0 12px;
+    gap: 16px;
+  }
+
+  .story-card,
+  .learning-card {
+    padding: 20px 14px;
+  }
+
+  .ai-cta-buttons {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 359px) {
+  .career-journey-header h2,
+  .success-stories-header h2,
+  .learning-header h2,
+  .ai-cta-card h2 {
+    font-size: 20px;
+  }
+
+  .journey-stats-grid,
+  .stories-grid,
+  .learning-grid {
+    padding: 0 8px;
+  }
+
+  .story-card,
+  .learning-card {
+    padding: 16px 10px;
+  }
+}

@@ -1,0 +1,222 @@
+.study-guide-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #334155;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.highlight-red {
+  color: #F5891F;
+}
+
+.sub-header {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #0f172a;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  word-break: break-word;
+}
+
+.sub-section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.text-paragraph {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 12px;
+  word-break: break-word;
+}
+
+.guide-table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.guide-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 13.5px;
+}
+
+.guide-table th {
+  border: 1px solid #e2e8f0;
+  padding: 12px 14px;
+  background-color: #f8fafc;
+  text-align: left;
+  font-weight: 600;
+  color: #1e293b;
+  white-space: nowrap;
+}
+
+.guide-table td {
+  border: 1px solid #e2e8f0;
+  padding: 12px 14px;
+  vertical-align: top;
+}
+
+.note-box {
+  background-color: #f1f5f9;
+  border-left: 4px solid #3b82f6;
+  padding: 12px 16px;
+  font-size: 13.5px;
+  color: #334155;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.guide-link {
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.guide-list {
+  padding-left: 20px;
+  margin: 4px 0;
+  font-size: 13.5px;
+}
+
+.steps-list {
+  padding-left: 24px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.step-item {
+  margin-bottom: 14px;
+}
+
+.step-title {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.step-desc {
+  font-size: 13.5px;
+  color: #475569;
+  margin-top: 2px;
+}
+
+.test-item {
+  margin-bottom: 8px;
+}
+
+/* ========================================
+   Consultation CTA Button
+   ======================================== */
+
+.consultation-cta-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.consultation-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+  color: white;
+  text-decoration: none;
+}
+
+.consultation-cta-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .study-guide-container {
+    padding: 28px 18px;
+    margin: 24px auto;
+    border-radius: 8px;
+  }
+  .main-title {
+    font-size: 24px;
+  }
+  .section-title {
+    font-size: 16px;
+    margin-top: 28px;
+  }
+  .consultation-cta-btn {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .study-guide-container {
+    padding: 20px 12px;
+    margin: 16px auto;
+  }
+  .main-title {
+    font-size: 20px;
+  }
+  .sub-header {
+    font-size: 12px;
+  }
+  .section-title {
+    font-size: 15px;
+    margin-top: 24px;
+  }
+  .text-paragraph {
+    font-size: 13px;
+  }
+  .steps-list {
+    padding-left: 18px;
+  }
+}
+
+@media (max-width: 359px) {
+  .study-guide-container {
+    padding: 16px 8px;
+    margin: 12px auto;
+  }
+  .main-title {
+    font-size: 18px;
+  }
+}

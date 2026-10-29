@@ -1,0 +1,614 @@
+/* ============================================================
+   AllUniversities.css — Clean & Fully Responsive
+============================================================ */
+
+:root {
+  --au-bg:           #EEF8FF;
+  --au-white:        #ffffff;
+  --au-ink:          #1a202c;
+  --au-muted:        #64748b;
+  --au-border:       #e2e8f0;
+  --au-accent:       #F6881F;
+  --au-accent-deep:  #d97312;
+  --au-accent-tint:  #fff7ed;
+  --au-green:        #389444;
+  --au-radius:       16px;
+  --au-radius-sm:    10px;
+  --au-shadow:       0 2px 14px rgba(0, 0, 0, 0.05);
+  --au-shadow-hover: 0 10px 30px rgba(246, 136, 31, 0.14);
+  --au-max:          1200px;
+}
+
+.au-page {
+  background: var(--au-bg);
+  min-height: 100vh;
+  padding: 80px 0 60px;
+}
+
+/* ── Hero ─────────────────────────────────────── */
+.au-hero {
+  text-align: center;
+  margin-bottom: 56px;
+  padding: 0 20px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.au-badge {
+  display: inline-block;
+  background: var(--au-green);
+  color: #ffffff;
+  padding: 8px 22px;
+  min-height: 36px;
+  height: auto;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
+
+.au-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--au-ink);
+  line-height: 1.15;
+  margin: 0 0 16px;
+  letter-spacing: -1px;
+}
+
+.au-hero h1 span {
+  color: var(--au-accent);
+}
+
+.au-hero p {
+  font-size: 18px;
+  color: var(--au-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Stats Pill Bar ──────────────────────────── */
+.au-stats {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: var(--au-white);
+  border: 1px solid var(--au-border);
+  border-radius: 50px;
+  padding: 14px 36px;
+  margin-top: 36px;
+  box-shadow: var(--au-shadow);
+  flex-wrap: wrap;
+}
+
+.au-stat {
+  text-align: center;
+  padding: 0 28px;
+  position: relative;
+}
+
+.au-stat:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 28px;
+  width: 1px;
+  background: var(--au-border);
+}
+
+.au-stat-number {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--au-accent);
+  line-height: 1;
+}
+
+.au-stat-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--au-muted);
+  margin-top: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Grid ─────────────────────────────────────── */
+.au-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  max-width: var(--au-max);
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* ── Logo Card ────────────────────────────────── */
+.au-card {
+  background: var(--au-white);
+  border-radius: var(--au-radius);
+  padding: 30px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--au-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid var(--au-border);
+  cursor: default;
+}
+
+.au-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--au-shadow-hover);
+  border-color: var(--au-accent);
+}
+
+.au-card-img-wrap {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.au-card-img-wrap img {
+  max-width: 100%;
+  max-height: 76px;
+  object-fit: contain;
+}
+
+.au-card-no-img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: var(--au-accent-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--au-accent-deep);
+  border: 2px solid var(--au-accent);
+}
+
+.au-card-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--au-ink);
+  text-align: center;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* ── Empty state ──────────────────────────────── */
+.au-empty {
+  text-align: center;
+  padding: 72px 20px;
+  color: var(--au-muted);
+  font-size: 16px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.au-empty-icon {
+  font-size: 44px;
+  margin-bottom: 18px;
+  opacity: 0.45;
+}
+
+/* ── Loading ──────────────────────────────────── */
+.au-loading {
+  text-align: center;
+  padding: 96px 20px;
+  color: var(--au-muted);
+}
+
+.au-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--au-border);
+  border-top-color: var(--au-accent);
+  border-radius: 50%;
+  animation: au-spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes au-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Shared section wrapper ───────────────────── */
+.au-inner {
+  max-width: var(--au-max);
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.au-section-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--au-ink);
+  letter-spacing: -0.6px;
+  margin: 0 0 8px;
+}
+
+.au-section-sub {
+  font-size: 16px;
+  color: var(--au-muted);
+  margin: 0 0 40px;
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+/* ── 1. Disciplines Section ──────────────────── */
+.au-disciplines-section {
+  background: var(--au-white);
+  padding: 72px 0;
+  border-top: 1px solid var(--au-border);
+}
+
+.au-disciplines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.au-chip {
+  background: var(--au-bg);
+  border: 1px solid var(--au-border);
+  color: var(--au-ink);
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.au-chip:hover {
+  background: var(--au-accent-tint);
+  border-color: var(--au-accent);
+  color: var(--au-accent-deep);
+}
+
+/* ── 2. Featured Universities ─────────────────── */
+.au-featured-section {
+  background: #f8fafc;
+  padding: 72px 0;
+  border-top: 1px solid var(--au-border);
+}
+
+.au-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.au-featured-card {
+  background: var(--au-white);
+  border: 1px solid var(--au-border);
+  border-radius: var(--au-radius);
+  padding: 26px 22px 22px;
+  box-shadow: var(--au-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.au-featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.au-featured-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.au-featured-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--au-accent-tint);
+  color: var(--au-accent);
+  font-size: 20px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(246, 136, 31, 0.25);
+  flex-shrink: 0;
+}
+
+.au-featured-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--au-ink);
+  margin: 0 0 3px;
+  line-height: 1.3;
+}
+
+.au-featured-count {
+  font-size: 13px;
+  color: var(--au-muted);
+  margin: 0;
+}
+
+.au-featured-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--au-ink);
+  background: #fef9c3;
+  padding: 3px 9px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+.au-star {
+  color: #eab308;
+  font-size: 12px;
+}
+
+.au-featured-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.au-tag {
+  background: var(--au-bg);
+  color: #334155;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.au-featured-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--au-accent);
+  text-decoration: none;
+  border-top: 1px solid var(--au-border);
+  padding-top: 14px;
+  min-height: 44px;
+  height: auto;
+  transition: color 0.18s ease;
+}
+
+.au-featured-btn:hover {
+  color: var(--au-accent-deep);
+}
+
+/* ── 3. Benefits Section ──────────────────────── */
+.au-benefits-section {
+  background: var(--au-white);
+  padding: 72px 0;
+  border-top: 1px solid var(--au-border);
+}
+
+.au-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.au-benefit-card {
+  padding: 28px 22px;
+  background: var(--au-bg);
+  border: 1px solid var(--au-border);
+  border-radius: var(--au-radius);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.au-benefit-card:hover {
+  transform: translateY(-3px);
+}
+
+.au-benefit-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--au-white);
+  color: var(--au-accent);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  flex-shrink: 0;
+}
+
+.au-benefit-card h3 {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--au-ink);
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.au-benefit-card p {
+  font-size: 14px;
+  color: var(--au-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── 4. CTA Section ───────────────────────────── */
+.au-cta-section {
+  background: #182331;
+  padding: 64px 0;
+}
+
+.au-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.au-cta-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px;
+  letter-spacing: -0.4px;
+}
+
+.au-cta-sub {
+  font-size: 15.5px;
+  color: #94a3b8;
+  margin: 0;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.au-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.au-btn-primary {
+  background: var(--au-accent);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 13px 28px;
+  min-height: 48px;
+  height: auto;
+  border-radius: var(--au-radius-sm);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.au-btn-primary:hover { background: var(--au-accent-deep); }
+
+.au-btn-outline {
+  background: transparent;
+  color: #F5891F;
+  border: 2px solid #F5891F;
+  padding: 11px 22px;
+  min-height: 48px;
+  height: auto;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Responsive across all 9 breakpoints ──────── */
+
+/* 1024px–1279px */
+@media (max-width: 1279px) {
+  .au-grid { grid-template-columns: repeat(3, 1fr); }
+  .au-featured-grid { grid-template-columns: repeat(2, 1fr); }
+  .au-benefits-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 768px–1023px (Tablet) */
+@media (max-width: 1023px) {
+  .au-page  { padding: 64px 0 48px; }
+  .au-hero  { margin-bottom: 44px; }
+  .au-hero h1 { font-size: 34px; }
+  .au-hero p  { font-size: 16px; }
+
+  .au-stats { flex-wrap: wrap; gap: 16px 0; padding: 18px 10px; border-radius: 20px; }
+  .au-stat  { padding: 0 20px; }
+  .au-stat-number { font-size: 22px; }
+
+  .au-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .au-section-title { font-size: 26px; }
+  .au-section-sub   { font-size: 15px; margin-bottom: 32px; }
+
+  .au-disciplines-section,
+  .au-featured-section,
+  .au-benefits-section { padding: 52px 0; }
+
+  .au-featured-grid,
+  .au-benefits-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .au-cta-inner  { flex-direction: column; text-align: center; }
+  .au-cta-actions { justify-content: center; }
+}
+
+/* 481px–767px (Small Tablet) */
+@media (max-width: 767px) {
+  .au-hero h1 { font-size: 28px; }
+  .au-featured-grid,
+  .au-benefits-grid { grid-template-columns: 1fr; }
+  .au-stat:not(:last-child)::after { display: none; }
+  .au-stat { width: 100%; margin-bottom: 8px; }
+  .au-cta-actions { flex-direction: column; width: 100%; }
+  .au-btn-primary, .au-btn-outline { width: 100%; }
+}
+
+/* 390px–480px (Large Mobile) */
+@media (max-width: 480px) {
+  .au-hero h1 { font-size: 26px; }
+  .au-badge { font-size: 12.5px; padding: 6px 16px; }
+  .au-grid { gap: 12px; padding: 0 12px; }
+  .au-card { padding: 20px 12px 16px; }
+  .au-card-img-wrap { height: 60px; margin-bottom: 12px; }
+  .au-card-img-wrap img { max-height: 60px; }
+  .au-cta-title { font-size: 22px; }
+}
+
+/* 360px–389px (Mobile) */
+@media (max-width: 389px) {
+  .au-hero h1 { font-size: 22px; }
+  .au-grid { grid-template-columns: 1fr; }
+  .au-inner { padding: 0 12px; }
+}
+
+/* 320px–359px (Small Mobile) */
+@media (max-width: 359px) {
+  .au-hero h1 { font-size: 20px; }
+  .au-hero p { font-size: 14px; }
+  .au-grid { grid-template-columns: 1fr; }
+  .au-inner { padding: 0 8px; }
+  .au-section-title { font-size: 20px; }
+}

@@ -1,0 +1,311 @@
+/* =================================
+   PREMIUM THEME VARIABLES
+================================= */
+:root {
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #edf2f7;
+  --sidebar-text: #2d3748;
+  --sidebar-text-muted: #718096;
+  --sidebar-hover-bg: #fffaf0; /* Very soft orange tint */
+  --sidebar-active-bg: #fffaf0;
+  --orange: #F6881F;
+  --orange-glow: rgba(246, 136, 31, 0.15);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =================================
+   SIDEBAR MAIN CONTAINER
+================================= */
+.sidebar {
+  width: 280px;
+  height: 100vh; /* Screen ki full height lock kar di */
+  background-color: var(--sidebar-bg, #ffffff);
+  border-right: 1px solid var(--sidebar-border, #edf2f7);
+  
+  display: flex;
+  flex-direction: column; /* Logo upar, navigation neeche */
+  
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =================================
+   LOGO SECTION
+================================= */
+.sidebar-logo {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  
+  /* YEH LOGO KO FIXED RAKHEGA */
+  flex-shrink: 0; 
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /* background-color: var(--sidebar-bg, #ffffff);  */
+  background: white;
+  
+  border-bottom: 1px solid var(--sidebar-border, #edf2f7);
+}
+
+.sidebar-logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 52px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+
+
+/* =================================
+   NAVIGATION CONTAINER & SCROLLBAR
+================================= */
+.sidebar-navigation {
+  flex: 1; /* Bachi hui saari space ye le lega */
+  padding: 16px;
+  
+
+  overflow-y: auto; 
+  overflow-x: hidden;
+  
+  /* Modern sleek scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+.sidebar-navigation::-webkit-scrollbar {
+  width: 5px;
+}
+.sidebar-navigation::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-navigation::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+.sidebar-navigation:hover::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu-item {
+  margin-bottom: 4px;
+}
+
+/* =================================
+   LINKS & BUTTONS (PILL STYLE)
+================================= */
+.sidebar-link,
+.sidebar-dropdown-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px; /* Modern Pill Shape */
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--sidebar-text);
+  transition: var(--transition);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1.5;
+  position: relative;
+}
+
+.sidebar-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0aec0; /* Premium soft gray */
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+/* Hover Effects */
+.sidebar-link:hover,
+.sidebar-dropdown-button:hover {
+  background-color: var(--sidebar-hover-bg);
+  color: var(--orange);
+  /* transform: translateX(4px); */
+}
+
+.sidebar-link:hover .sidebar-icon,
+.sidebar-dropdown-button:hover .sidebar-icon {
+  color: var(--orange);
+}
+
+/* Active State - Highlighting */
+
+.sidebar-link.active {
+  background-color: var(--sidebar-active-bg);
+  color: var(--orange) !important;
+  font-weight: 600;
+  box-shadow: 0 0 0 1px var(--orange-glow);
+}
+
+/* Active Left Indicator Line */
+
+/* .sidebar-link.active::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 4px;
+  background-color: var(--orange);
+  border-radius: 0 4px 4px 0;
+} */
+
+.sidebar-link.active .sidebar-icon {
+  color: var(--orange);
+}
+
+/* =================================
+   DROPDOWN ARROW
+================================= */
+.sidebar-arrow {
+  margin-left: auto;
+  font-size: 12px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #cbd5e0;
+}
+
+.sidebar-arrow.rotate {
+  transform: rotate(180deg);
+  color: var(--orange);
+}
+
+/* Open Dropdown Parent Highlights */
+.sidebar-menu-item.open > .sidebar-dropdown-button {
+  color: var(--orange);
+  background-color: var(--sidebar-hover-bg);
+}
+
+.sidebar-menu-item.open > .sidebar-dropdown-button .sidebar-icon {
+  color: var(--orange);
+}
+
+/* =================================
+   SUBMENU
+================================= */
+.sidebar-submenu {
+  list-style: none;
+  margin: 4px 0 8px;
+  padding: 0 0 0 34px; /* Perfectly aligned under the parent text */
+  overflow: hidden;
+  display: none;
+}
+
+.sidebar-submenu.show {
+  display: block;
+  animation: smoothSlideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes smoothSlideDown {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.sidebar-submenu-item {
+  position: relative;
+  /* margin-bottom: px; */
+  margin-top: 10px;
+}
+
+.sidebar-submenu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px 8px 4px;
+  text-decoration: none;
+  color: var(--sidebar-text-muted);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.sidebar-submenu-link:hover {
+  color: var(--orange);
+  background-color: var(--sidebar-hover-bg);
+  transform: translateX(4px);
+}
+
+.sidebar-submenu-link.active {
+  color: var(--orange);
+  font-weight: 600;
+  background-color: var(--sidebar-active-bg);
+}
+
+/* Submenu Icon */
+.submenu-icon {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sidebar-text-muted);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.sidebar-submenu-link:hover .submenu-icon,
+.sidebar-submenu-link.active .submenu-icon {
+  color: var(--orange);
+}
+
+/* Premium Hollow Dot for Submenu */
+.submenu-dot {
+  width: 6px;
+  height: 6px;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: var(--transition);
+  background-color: transparent;
+}
+
+/* .sidebar-submenu-link:hover .submenu-dot {
+  border-color: var(--orange);
+} */
+
+.sidebar-submenu-link.active .submenu-dot {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  box-shadow: 0 0 4px var(--orange-glow);
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+@media (max-width: 992px) {
+  .sidebar { width: 260px; }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: none;
+    z-index: 1000;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: 6px 0 30px rgba(0, 0, 0, 0.15);
+  }
+}

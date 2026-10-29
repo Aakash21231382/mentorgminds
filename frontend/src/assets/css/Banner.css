@@ -1,0 +1,456 @@
+
+
+
+    .banner {
+        width: 100%;
+        min-height: 600px;
+        background-color: #EEF8FF;
+        background-image: url("../assets/images/Banner-Bg.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Grid Background */
+    .banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            circle at top,
+            rgba(206,237,255,.8) 0%,
+            rgba(238,248,255,.5) 35%,
+            transparent 75%
+        );
+        pointer-events: none;
+    }
+    
+    .banner-overlay {
+        position: absolute;
+        width: 700px;
+        height: 600px;
+        background: radial-gradient(circle,#D8ECFF 0%,transparent 70%);
+        top: -250px;
+        left: -200px;
+        opacity: .55;
+        filter: blur(30px);
+    }
+    
+    .banner-container {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        max-width: 1850px;
+        padding: 0 3%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+    
+    .banner-left {
+        flex: 1;
+    }
+    
+    .tag {
+        display: inline-block;
+        padding: 8px 16px;
+        background: #11b85d;
+        min-height: 38px;
+        height: auto;
+        color: #ffffff;
+        border-radius: 9999px;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+    
+    .banner-left h1 {
+        font-size: 48px;
+        line-height: 56px;
+        font-weight: 700;
+        letter-spacing: -1.2px;
+        color: #222;
+        margin-bottom: 18px;
+    }
+    
+    .banner-left span {
+        letter-spacing: -1.2px;
+        color: #ff6b00;
+        font-weight: 700;
+        display: block;
+        font-size: 48px;
+    }
+    
+    .banner-left {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        color: #191C1d;
+        margin-bottom: 18px;
+    }
+    
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 11px;
+        margin-top: 50px;
+    }
+    
+    .btn1 {
+        min-height: 52px;
+        height: auto;
+        padding: 12px 32px;
+        border: 2px solid #F07500;
+        border-radius: 12px;
+        background: white;
+        color: #F07500;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 10px 25px rgba(0,0,0,.08);
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btn2 {
+        min-height: 52px;
+        height: auto;
+        padding: 12px 28px;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background: #F07500;
+        letter-spacing: 0px;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        line-height: 24px;
+    }
+
+    .banner-subtext-2 {
+        color: #564336;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0;
+    }
+
+    .bn-video-iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        border: none;
+    }
+
+    .bn-video-player {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .preview-card--clickable {
+        cursor: pointer;
+    }
+
+    .banner--loading {
+        background-image: url("../assets/images/Banner-Bg.svg");
+        min-height: 400px;
+    }
+    
+    .banner-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        /* height: 425px; <-- Ise hata diya gaya hai taaki container image ke hisaab se height le */
+    }
+    
+    .banner-right img {
+        width: 100%;
+        max-width: 520px; /* Badi screen par size limit karne ke liye */
+        height: auto; /* Aspect ratio maintain karne ke liye */
+        border-radius: 12px;
+        margin-top: 5px;
+        box-shadow: 0 20px 50px rgba(0,0,0,.12);
+        border: 5px solid white;
+    }
+    
+    .preview-card {
+        position: absolute;
+        bottom: 20px;
+        right: 15px;
+        background: #fff;
+        padding: 15px 18px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    }
+    
+    .play {
+        width: 42px;
+        height: 42px;
+        background: #DFF3FF;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .play img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        display: block;
+        margin-bottom: 3px;
+    }
+    
+    .preview-card small {
+        color: #888;
+    }
+    
+    .preview-card h4 {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        color: #1E1B1C;
+        margin: 0;
+    }
+    
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 40px;
+        padding-bottom: 20px;
+    }
+    
+    .dot {
+        width: 8px;
+        height: 8px;
+        background: #D9D9D9;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+    
+    .dot.active {
+        width: 25px;
+        height: 8px;
+        background: #F07500;
+        border-radius: 20px;
+    }
+    
+    @media(max-width: 991px) {
+        .banner-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 40px;
+            padding: 60px 16px 40px;
+        }
+    
+        .banner-left h1 {
+            font-size: 42px;
+        }
+    
+        .banner-left span {
+            font-size: 42px;
+        }
+    
+        .buttons {
+            justify-content: center;
+        }
+    
+        .banner-right {
+            width: 100%;
+        }
+    
+        .banner-right img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .preview-card {
+            right: 5%;
+            transform: scale(0.9);
+        }
+    }
+
+    @media(max-width: 480px) {
+        .banner-container {
+            padding: 50px 16px 40px;
+        }
+    
+        .banner-left h1 {
+            font-size: 32px;
+            line-height: 42px;
+        }
+    
+        .banner-left span {
+            font-size: 32px;
+        }
+    
+        .banner-left p {
+            font-size: 16px;
+        }
+    
+        .tag {
+            padding-top: 12px;
+            height: auto;
+            min-height: 0;
+            width: 100%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+    }
+
+/* =========================================
+   BANNER CAROUSEL
+========================================= */
+
+.bn-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Track holds all slides stacked */
+.bn-track {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+}
+
+/* Every slide is absolutely positioned and hidden */
+.bn-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  background-color: #EEF8FF;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 600px;
+}
+
+/* Active slide */
+.bn-slide--active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative; /* so parent track gets height */
+}
+
+/* ── Arrow wrapper — keeps arrows inside container bounds ── */
+.bn-arrows-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  pointer-events: none;
+
+  /* Match banner-container max-width & padding */
+  max-width: 1850px;
+  margin: 0 auto;
+  padding: 0 3%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Arrows */
+.bn-arrow {
+  pointer-events: all;
+  background: rgba(255,255,255,0.85);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: background 0.2s, color 0.2s;
+  color: #F07500;
+  flex-shrink: 0;
+}
+.bn-arrow:hover { background: #F07500; color: #fff; }
+.bn-arrow--prev { }
+.bn-arrow--next { }
+
+/* Dots — keep at bottom of carousel */
+.bn-carousel .slider-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+/* =========================================
+   VIDEO MODAL
+========================================= */
+.bn-video-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bn-video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bn-video-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.bn-video-close:hover { background: #F07500; color: #fff; }
+
+@media (max-width: 991px) {
+  .bn-track { min-height: unset; }
+  .bn-slide { min-height: unset; }
+  .bn-arrows-wrap { display: none; }
+}

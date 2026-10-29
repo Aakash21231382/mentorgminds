@@ -1,0 +1,472 @@
+/* ══════════════════════════════════════════════════
+   ONLINE COURSE SECTION
+══════════════════════════════════════════════════ */
+
+.online-course-section {
+  width: 100%;
+  padding: 80px 0 60px;
+  background: #fff;
+  overflow: hidden; 
+}
+
+.oc-container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+  .oc-container {
+    padding: 0 3%;
+  }
+}
+
+/* ── Heading ── */
+.online-course-heading {
+  margin-bottom: 28px;
+}
+
+.online-course-heading h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #191C1D;
+  line-height: 56px;
+  letter-spacing: -1.2px;
+}
+
+.online-course-heading h2 span {
+  color: #FF6E06;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/* ══════════════════════════════════════════════════
+   CATEGORY TABS (Scrollbar removed, auto-sliding enabled)
+══════════════════════════════════════════════════ */
+.course-category {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #E5E7EB;
+  padding-bottom: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  /* Firefox, IE and Edge ke liye scrollbar hide karna */
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+/* Chrome, Safari, Opera ke liye scrollbar hide karna */
+.course-category::-webkit-scrollbar {
+  display: none;
+}
+
+.course-category button {
+  border: none;
+  background: transparent;
+  color: #6B7280;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  position: relative;
+  padding: 6px 0;
+  font-family: 'Inter', sans-serif;
+  flex-shrink: 0;
+}
+
+.course-category button:hover {
+  color: #1A1A1A;
+}
+
+.course-category .active-category {
+  color: #1A1A1A;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent !important;
+}
+
+.course-category .active-category::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 5px;
+  background: #FF6E06;
+  border-radius: 50px;
+}
+
+/* ══════════════════════════════════════════════════
+   FEATURE ROW
+══════════════════════════════════════════════════ */
+.course-feature-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.oc-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #191C1D;
+  opacity: 0.6;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.oc-check-icon {
+  color: #FF7A00;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.oc-view-all {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: gray;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.oc-view-all:hover { color: #FF7A00; }
+
+/* ══════════════════════════════════════════════════
+   SWIPER CARD WRAPPER + ARROWS
+══════════════════════════════════════════════════ */
+.oc-card-wrapper {
+  position: relative;
+}
+
+.oc-swiper {
+  width: 100%;
+  padding: 20px 0 !important; 
+  margin: -20px 0 !important;
+  overflow: hidden;
+}
+
+.oc-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  transition: all 0.2s ease;
+  z-index: 10;
+  padding-bottom: 0px; 
+}
+
+.oc-left-btn {
+  left: -28px;
+  background: #fff;
+  color: #666;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e8e8e8;
+}
+
+.oc-left-btn:hover {
+  background: #f5f5f5;
+}
+
+.oc-right-btn {
+  right: -28px;
+  background: #1a1a1a;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.oc-right-btn:hover {
+  background: #FF7A00;
+}
+
+/* ══════════════════════════════════════════════════
+   CARD
+══════════════════════════════════════════════════ */
+.oc-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #efefef;
+ 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.oc-card:hover {
+  transform: translateY(-6px);
+
+}
+
+/* ── Card Image ── */
+.oc-card-image {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.oc-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.oc-card:hover .oc-card-image img {
+  transform: scale(1.05);
+}
+
+/* ── Card Content ── */
+.oc-card-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.oc-card-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.oc-subtitle {
+  color: #888;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+/* ── Feature List ── */
+.oc-features-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0 0 18px;
+}
+
+.oc-features-list li {
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* ── Skills ── */
+.oc-skills-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.oc-skills-label {
+  display: block;
+  font-size: 16px;
+  color: #191C1D;
+  opacity: 0.8;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 12px;
+}
+
+.oc-skill-icons {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  flex-wrap: wrap;
+}
+
+.oc-skill-icons img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  background: #fff;
+  padding: 3px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.oc-more-skill {
+  font-size: 16px;
+  color: #191C1D;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.oc-no-courses {
+  text-align: center;
+  color: #aaa;
+  padding: 40px 0;
+  font-size: 16px;
+}
+
+.oc-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #f0f4f8;
+}
+
+/* ── Buttons ── */
+.oc-card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  min-height: 45px;
+  flex-wrap: wrap;
+}
+
+.oc-btn-view {
+  flex: 1;
+  min-width: 110px;
+  min-height: 44px;
+  height: auto;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1.5px solid #F07500;
+  color: #F07500;
+  background: #fff;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oc-btn-view:hover:not(.oc-btn-disabled) {
+  background: #fff5eb;
+  color: #F07500;
+}
+
+.oc-btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.oc-btn-brochure {
+  flex: 1;
+  min-width: 110px;
+  min-height: 44px;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  background: #F07500;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.oc-btn-brochure:hover:not(:disabled) {
+  background: #e06d00;
+}
+
+.oc-btn-brochure:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ══════════════════════════════════════════════════
+   SWIPER SLIDER DOTS  (oc-slider-dots — dedicated class)
+══════════════════════════════════════════════════ */
+.oc-slider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.oc-slider-dots .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #D9D9D9;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 1 !important;
+  margin: 0 !important;
+}
+
+.oc-slider-dots .swiper-pagination-bullet-active {
+  width: 25px;
+  height: 8px;
+  background: #F07500;
+  border-radius: 20px;
+}
+
+/* ── Animation classes (same as ChooseCareer) ── */
+.career-slider-out {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.career-slider-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════ */
+@media (max-width: 992px) {
+  .online-course-heading h2 { font-size: 32px; }
+  .oc-slider-btn { display: none; }
+  .course-feature-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .oc-view-all { margin-left: 0; }
+}
+
+@media (max-width: 768px) {
+  .online-course-section { padding: 60px 0; }
+  .online-course-heading h2 { font-size: 26px; }
+  .oc-card-buttons { flex-direction: column; }
+}
+
+@media (min-width: 1600px) {
+  .oc-container {
+    max-width: 1760px;
+  }
+}

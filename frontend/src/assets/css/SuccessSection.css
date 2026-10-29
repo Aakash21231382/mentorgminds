@@ -1,0 +1,714 @@
+/* =====================================================
+   SUCCESS SECTION (Full Working CSS with All Cards Dots Fix)
+===================================================== */
+.unique-success-section {
+  width: 100%;
+  padding: 50px 0;
+  background: #fff;
+  overflow: hidden; 
+}
+
+.unique-success-container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+  .unique-success-container {
+      padding: 0 3%;
+  }
+}
+
+/* =====================================================
+   HEADING
+===================================================== */
+.unique-success-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.unique-success-tag {
+  display: inline-block;
+  background: #389444;
+  color: #fff;
+  min-height: 38px;
+  height: auto;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+
+.success-video-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.success-video-modal {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+}
+
+.success-video-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.success-video-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+.success-video-media {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.unique-success-heading h2 {
+  font-size: 48px;
+  line-height: 66px;
+  color: #10233C;
+  font-weight: 700;
+  max-width: 700px;
+  margin: auto;
+  letter-spacing: -1.2px;
+}
+
+.unique-success-heading h2 span {
+  color: #F07500;
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+.unique-success-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 70px;
+  margin-bottom: 90px;
+}
+
+.unique-success-item {
+  text-align: center;
+}
+
+.unique-success-item h3 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #F07500;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+
+.unique-success-item p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #191C1D;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+/* =====================================================
+   STORY SECTION & SLIDER
+===================================================== */
+.unique-story-wrapper {
+  position: relative;
+  margin-bottom: 90px;
+}
+
+.unique-story-swiper {
+  width: 100%;
+  overflow: hidden !important;
+  border-radius: 18px;
+}
+
+.unique-story-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+  height: 470px;
+  background: #fff;
+  border: 1px solid #ECECEC;
+  border-radius: 18px;
+  padding: 42px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+.unique-story-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.unique-story-content h3 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.unique-story-desc {
+  font-size: 14px;
+  line-height: 24px;
+  color: #191C1D;
+  opacity: 0.7;
+  margin-bottom: 45px;
+}
+
+.unique-story-desc strong {
+  color: #222;
+  font-weight: 700;
+  opacity: 0.7 !important;
+}
+
+.unique-story-content h4 {
+  font-size: 20px;
+  line-height: 30px;
+  color: #191C1D;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.unique-story-content span {
+  color: #191C1D;
+  opacity: 0.7;
+  line-height: 24px;
+  font-size: 14px;
+  display: block;
+}
+
+/* =====================================================
+   WORKING CUSTOM DOTS (Inside Every Card)
+===================================================== */
+.unique-story-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.unique-story-dots span {
+  width: 8px;
+  height: 8px;
+  background: #F6CBB4;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.unique-story-dots span.active {
+  width: 26px;
+  border-radius: 20px;
+  background: #F07500;
+}
+
+/* =====================================================
+   IMAGE
+===================================================== */
+.unique-story-image {
+  width: 450px;
+  height: 380px;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.unique-story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =====================================================
+   PLAY BUTTON
+===================================================== */
+.unique-watch-btn {
+  position: absolute;
+  top: 170px;
+  left: 150px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 58px;
+  padding: 0 24px;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.unique-watch-btn:hover {
+  background: rgba(255,255,255,.25);
+}
+
+.unique-watch-btn svg {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   NAME ON IMAGE
+===================================================== */
+.unique-student-info {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  color: #fff;
+}
+
+.unique-student-info h4 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.unique-student-info p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+/* =====================================================
+   ARROWS
+===================================================== */
+.unique-story-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 32px;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.unique-prev-btn {
+  left: -26px;
+  background: #fff;
+  color: #444;
+  border: 1px solid #ECECEC;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.unique-prev-btn:hover {
+  background: #f5f5f5;
+}
+
+.unique-next-btn {
+  right: -26px;
+  background: #0F223A;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+.unique-next-btn:hover {
+  background: #F07500;
+}
+
+/* =====================================================
+   LEARNERS BANNER
+===================================================== */
+.unique-learners-banner {
+  position: relative;
+  overflow: hidden;
+  background: #FF6E06;
+  border-radius: 18px;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.unique-learners-banner::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  left: -230px;
+  top: -110px;
+}
+
+.unique-learners-banner::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  right: -170px;
+  top: -180px;
+}
+
+.unique-learners-banner .unique-circle-left {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  left: 40px;
+  bottom: 10px;
+}
+
+.unique-learners-banner .unique-circle-right {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  right: 70px;
+  top: 85px;
+}
+
+.unique-learners-dots {
+  position: absolute;
+  bottom: 1px;
+  left: 50%; 
+  transform: translateX(-50%);
+  width: 170px;
+  height: 90px;
+  opacity: .25;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,.45) 1.6px, transparent 1.6px);
+  background-size: 14px 14px;
+}
+
+.unique-learner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.unique-learner-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.unique-learner-top h4 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.unique-learner-images {
+  display: flex;
+  align-items: center;
+}
+
+.unique-learner-images img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  margin-left: -12px;
+}
+
+.unique-learner-images img:first-child {
+  margin-left: 0;
+}
+
+.unique-learner-content h2 {
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -1px;
+}
+
+.unique-learner-content h2 span {
+  color: #ffffff;
+}
+
+.unique-learner-content p {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 24px;
+  max-width: 620px;
+}
+
+.unique-testimonial-btn {
+  position: relative;
+  z-index: 2;
+  height: 60px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+  background: #fff;
+  color: #FF6E06;
+}
+
+.unique-testimonial-btn svg {
+  font-size: 16px;
+}
+
+.unique-testimonial-btn:hover {
+  background: #FFF5EE;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+  .unique-success-section{
+    padding: 60px 0;
+  }
+  .unique-success-heading{
+    margin-bottom: 45px;
+  }
+  .unique-success-heading h2{
+    font-size: 42px;
+    line-height: 52px;
+  }
+  .unique-success-stats{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 20px;
+    margin: 50px 0 70px;
+  }
+  .unique-story-wrapper{
+    margin-bottom: 70px;
+  }
+  .unique-story-card{
+    flex-direction: column-reverse;
+    height: auto;
+    padding: 30px;
+    gap: 35px;
+    text-align: center;
+  }
+  .unique-story-content{
+    max-width: 100%;
+  }
+  .unique-story-image{
+    width: 100%;
+    height: 420px;
+  }
+  .unique-watch-btn{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
+  }
+  .unique-student-info{
+    left: 30px;
+    bottom: 30px;
+    text-align: left;
+  }
+  .unique-story-arrow{
+    display: none;
+  }
+  .unique-learners-banner{
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+    padding: 45px 30px;
+  }
+  .unique-learner-top{
+    justify-content: center;
+  }
+  .unique-learner-content{
+    max-width: 100%;
+  }
+  .unique-learners-dots,
+  .unique-circle-left,
+  .unique-circle-right,
+  .unique-learners-banner::before,
+  .unique-learners-banner::after{
+    display: none;
+  }
+}
+
+@media (max-width: 768px){
+  .unique-success-section{
+    padding: 50px 0;
+  }
+  .unique-success-heading{
+    margin-bottom: 35px;
+  }
+  .unique-success-heading h2{
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: 0;
+  }
+  .unique-success-stats{
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 40px 0 60px;
+  }
+  .unique-success-item h3{
+    font-size: 42px;
+  }
+  .unique-success-item p{
+    font-size: 16px;
+  }
+  .unique-story-card{
+    padding: 20px;
+  }
+  .unique-story-content h3{
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 18px;
+  }
+  .unique-story-desc{
+    margin-bottom: 25px;
+  }
+  .unique-story-image{
+    height: 320px;
+  }
+  .unique-watch-btn{
+    top: 15px;
+    margin-top: 100px;
+    height: 48px;
+    padding: 0 18px;
+    font-size: 14px;
+  }
+  .unique-watch-btn svg{
+    width: 34px;
+    height: 34px;
+  }
+  .unique-student-info{
+    left: 20px;
+    bottom: 20px;
+  }
+  .unique-student-info h4{
+    font-size: 22px;
+  }
+  .unique-story-dots{
+    justify-content: center;
+  }
+  .unique-learners-banner{
+    padding: 30px 20px;
+  }
+  .unique-learner-top{
+    flex-direction: column;
+    gap: 15px;
+  }
+  .unique-learner-content h2{
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .unique-learner-content p{
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .unique-testimonial-btn{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px){
+  .unique-success-heading h2{
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .unique-success-tag{
+    font-size: 11px;
+    padding: 9px 14px;
+  }
+  .unique-story-card{
+    padding: 16px;
+    border-radius: 14px;
+  }
+  .unique-story-content h3{
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .unique-story-desc{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .unique-story-image{
+    height: 260px;
+  }
+  .unique-watch-btn{
+    height: 42px;
+    margin-top: 100px;
+    padding: 0 15px;
+    font-size: 13px;
+  }
+  .unique-watch-btn svg{
+    width: 30px;
+    height: 30px;
+  }
+  .unique-student-info h4{
+    font-size: 18px;
+  }
+  .unique-student-info p{
+    font-size: 13px;
+  }
+  .unique-learner-images img{
+    width: 36px;
+    height: 36px;
+  }
+  .unique-learner-content h2{
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .unique-learner-content p{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .unique-testimonial-btn{
+    height: 54px;
+    font-size: 13px;
+  }
+}

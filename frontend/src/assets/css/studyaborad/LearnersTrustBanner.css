@@ -1,0 +1,141 @@
+/* Banner Main Container */
+.trust-banner-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px 0;
+  font-family:Inter, sans-serif;
+}
+
+.trust-banner-card {
+  background-color: #ffffff;
+  /* border-radius: 16px; */
+  overflow: hidden;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
+  /* border: 1px solid #e2e8f0; */
+}
+
+/* Left Image Box */
+.trust-banner-img-col {
+  position: relative;
+  min-height: 350px;
+  overflow: hidden;
+}
+
+.trust-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Right Content Box */
+.trust-banner-content-col {
+  
+  /* padding: 48px 40px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+/* Headings */
+.trust-banner-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #191C1D;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+/* Blue Accent Instead of Red */
+.trust-banner-highlight {
+  color: #F5891F;
+}
+
+.trust-banner-subtitle {
+  font-size: 16px;
+  color: #64748b;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+/* Action Button */
+.trust-banner-btn {
+  background-color: #F5891F;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  /* box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25); */
+  text-decoration: none;
+}
+
+.trust-banner-btn:hover {
+  background-color: #F5891F;
+  /* box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35); */
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+.trust-banner-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile & Tablet Adjustments */
+@media (max-width: 991.98px) {
+  .trust-banner-img-col {
+    min-height: 280px;
+  }
+
+  .trust-banner-content-col {
+    padding: 36px 24px;
+  }
+
+  .trust-banner-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-banner-section {
+    padding: 24px 0;
+  }
+
+  .trust-banner-img-col {
+    min-height: 200px;
+  }
+
+  .trust-banner-content-col {
+    padding: 24px 12px;
+  }
+
+  .trust-banner-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .trust-banner-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 359px) {
+  .trust-banner-content-col {
+    padding: 18px 8px;
+  }
+
+  .trust-banner-title {
+    font-size: 20px;
+  }
+}

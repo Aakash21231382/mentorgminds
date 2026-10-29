@@ -1,0 +1,385 @@
+
+/* Breadcrumb Navigation */
+.cl-breadcrumb-wrapper {
+  background-color: #ffffff;
+  padding: 15px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #6c757d;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-clickable {
+  cursor: pointer;
+}
+
+.breadcrumb-item {
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-item:hover {
+  color: #F5891F;
+}
+
+.breadcrumb-separator {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.breadcrumb-active {
+  color: #111418;
+  font-weight: 600;
+  cursor: default !important;
+}
+
+.city-locations-section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+/* Header */
+.cl-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cl-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111418;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.cl-highlight {
+  color: #F5891F;
+}
+
+.cl-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+/* Locations Grid - 3 Cards Per Row on Laptop */
+.cl-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1024px) {
+  .cl-locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cl-locations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cl-location-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.cl-location-card:hover {
+  transform: translateY(-5px);
+}
+
+.cl-card-header {
+  background: linear-gradient(135deg, #F5891F 0%, #d67518 100%);
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cl-location-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #F5891F;
+  flex-shrink: 0;
+}
+
+.cl-location-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cl-location-city {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin: 5px 0 0 0;
+  font-weight: 400;
+}
+
+.cl-card-body {
+  padding: 25px;
+  flex: 1;
+}
+
+.cl-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: #495057;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.cl-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.cl-info-icon {
+  color: #F5891F;
+  font-size: 1.1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.cl-info-label {
+  font-weight: 700;
+  color: #111418;
+  margin: 0 0 4px 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cl-info-value {
+  margin: 0;
+  color: #495057;
+  word-break: break-word;
+}
+
+.cl-link {
+  color: #F5891F;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cl-link:hover {
+  color: #d67518;
+  text-decoration: underline;
+}
+
+/* Card Footer - Buttons */
+.cl-card-footer {
+  display: flex;
+  gap: 12px;
+  padding: 20px 25px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+}
+
+.cl-btn-primary,
+.cl-btn-secondary {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-decoration: none;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.cl-btn-primary {
+  background-color: #F5891F;
+  color: #ffffff;
+  border-color: #F5891F;
+}
+
+.cl-btn-secondary {
+  background-color: #ffffff;
+  color: #111418;
+  border-color: #dee2e6;
+}
+
+
+/* No data message */
+.cl-no-data {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cl-no-data p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.cl-no-courses {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Loading Spinner */
+.cl-loading-container,
+.cl-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.cl-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #F5891F;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Map Section */
+.city-map-section {
+  padding: 60px 0 80px 0;
+
+}
+
+.map-section-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #191C1D;
+  margin-bottom: 40px;
+}
+
+.map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+  border-radius: 12px;
+}
+
+.map-note {
+  text-align: center;
+  margin-top: 15px;
+  color: #6c757d;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cl-title {
+    font-size: 1.8rem;
+  }
+
+  .cl-card-footer {
+    flex-direction: column;
+  }
+
+  .map-section-title {
+    font-size: 1.6rem;
+  }
+
+  .map-container iframe {
+    height: 350px;
+  }
+  
+  .cl-card-header {
+    padding: 20px;
+  }
+  
+  .cl-location-name {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .city-locations-section {
+    padding: 40px 0;
+  }
+
+  .cl-title {
+    font-size: 1.5rem;
+  }
+
+  .cl-subtitle {
+    font-size: 1rem;
+  }
+
+  .cl-location-name {
+    font-size: 1.1rem;
+  }
+
+  .map-container {
+    padding: 15px;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+}
+
+/* Course Section (from Centers.jsx) */
+.centers-courses-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.centers-courses-section .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111418;
+  margin-bottom: 50px;
+  line-height: 1.3;
+}
+
+.centers-courses-section .row {
+  margin-top: 30px;
+}

@@ -1,0 +1,221 @@
+/* ============================================================
+   ApplyNowModal.css — Clean & Fully Responsive
+============================================================ */
+
+.anm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+}
+
+.anm-card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 640px;
+  max-height: 92vh;
+  overflow: hidden; 
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Close Button */
+.anm-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: background 0.2s, color 0.2s;
+}
+.anm-close:hover { background: #F6881F; color: #fff; }
+
+/* Header */
+.anm-header {
+  background: #F6881F;
+  border-radius: 20px 20px 0 0;
+  padding: 28px 28px 22px;
+  flex-shrink: 0;
+}
+
+.anm-title {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.anm-subtitle {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Body */
+.anm-body {
+  padding: 24px 28px 28px;
+  flex: 1;
+  overflow-y: auto; 
+}
+
+/* Form */
+.anm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.anm-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Two-column row */
+.anm-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.anm-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.anm-required { color: #F6881F; }
+
+.anm-input,
+.anm-select,
+.anm-textarea {
+  padding: 11px 14px;
+  font-size: 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fafafa;
+  color: #1f2937;
+}
+
+.anm-input:focus,
+.anm-select:focus,
+.anm-textarea:focus {
+  border-color: #F6881F;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(246, 136, 31, 0.12);
+}
+
+.anm-input::placeholder,
+.anm-textarea::placeholder { color: #9ca3af; }
+
+.anm-input--error { border-color: #ef4444 !important; box-shadow: none !important; }
+
+.anm-select  { cursor: pointer; }
+.anm-textarea { resize: vertical; min-height: 80px; }
+
+.anm-error {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 4px;
+}
+
+/* Submit */
+.anm-submit {
+  padding: 13px;
+  min-height: 48px;
+  height: auto;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: #F6881F;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 4px;
+  transition: opacity 0.2s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.anm-submit:hover:not(:disabled)  { opacity: 0.9; }
+.anm-submit:active:not(:disabled) { transform: scale(0.98); }
+.anm-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Success */
+.anm-success {
+  text-align: center;
+  padding: 48px 28px;
+}
+
+.anm-success-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 18px;
+  background: #22c55e;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.anm-success-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.anm-success-text {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Responsive across all breakpoints */
+@media (max-width: 540px) {
+  .anm-overlay { padding: 10px; }
+  .anm-header  { padding: 20px 16px 16px; }
+  .anm-body    { padding: 16px 16px 20px; }
+  .anm-row     { grid-template-columns: 1fr; }
+  .anm-title   { font-size: 20px; }
+}
+
+@media (max-width: 359px) {
+  .anm-overlay { padding: 6px; }
+  .anm-header  { padding: 16px 12px 14px; }
+  .anm-body    { padding: 14px 12px 16px; }
+  .anm-title   { font-size: 18px; }
+}

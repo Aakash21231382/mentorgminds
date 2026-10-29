@@ -1,0 +1,462 @@
+
+
+
+
+
+
+.awards-section{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #182331;
+  padding: 70px 0 55px;
+}
+
+.award-circle{
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.award-circle-1{
+  width: 430px;
+  height: 430px;
+  left: -230px;
+  top: -90px;
+  border: 95px solid rgba(255,255,255,.035);
+}
+
+.award-circle-2{
+  width: 470px;
+  height: 470px;
+  top: -290px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 42px solid rgba(255,255,255,.03);
+}
+
+.award-circle-top{
+  position: absolute;
+  top: -340px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  border: 60px solid rgba(255,255,255,0.035);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.awards-section::after{
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -170px;
+  bottom: -170px;
+  border: 90px solid rgba(255,255,255,.03);
+  border-radius: 50%;
+}
+
+.awards-section::before{
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  left: -300px;
+  bottom: -20px;
+  border: 120px solid rgba(255,255,255,.03);
+  border-radius: 50%;
+}
+
+.award-dots{
+  position: absolute;
+  left: -50px;
+  bottom: 220px;
+  width: 90px;
+  height: 90px;
+  opacity: .18;
+  background-image:
+  radial-gradient(#fff 1.4px,transparent 1.4px);
+  background-size: 10px 10px;
+}
+
+/* Container matching with other sections */
+.awards-container {
+  position: relative;
+  z-index: 5;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+  .awards-container {
+   
+      padding: 0 3%;
+      margin: 0 auto;
+  }
+}
+
+.award-heading{
+  text-align: center;
+  margin-bottom: 58px;
+}
+
+.award-heading h2{
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #ffffff;
+  letter-spacing: -1.2px;
+}
+
+.award-heading span{
+  color: #F07500;
+}
+
+.award-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.award-left{
+  position: relative;
+  flex: 0 0 340px;
+  height: 355px;
+  display: flex;
+  align-items: center;
+}
+
+.award-left img{
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+ margin-top: 160px;
+  display: block;
+}
+
+.award-right{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.award-cards{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Container ke andar cards ko perfectly distribute karne ke liye */
+.award-card{
+  flex: 1;
+  min-width: 0; 
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px 20px;
+  text-align: center;
+  transition: .35s;
+  box-shadow: 0 8px 30px rgba(0,0,0,.12);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.award-card:hover{
+  transform: translateY(-8px);
+}
+
+.award-card img{
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 14px;
+  display: block;
+}
+
+.award-card h5{
+  font-size: 14px;
+  font-weight: 700;
+  color: #F07500;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.award-card h4{
+  font-size: 18px;
+  font-weight: 700;
+  color: #1B1B1B;
+  line-height: 26px;
+  margin-bottom: 12px;
+}
+
+.award-year{
+  font-size: 26px;
+  font-weight: 800;
+  color: #F07500;
+  margin-bottom: 10px;
+}
+
+.award-card p{
+  font-size: 14px;
+  line-height: 22px;
+  color: #191C1D;
+  opacity: .8;
+  margin: 0;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 34px;
+}
+
+.slider-dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #F8B58A;
+}
+
+.slider-dots .dot.active {
+  width: 20px;
+  border-radius: 20px;
+  background: #F07500;
+}
+
+/* =========================================
+ LEARNER SUPPORT
+========================================= */
+
+.learner-support{
+  padding: 90px 0 20px;
+  text-align: center;
+}
+
+.learner-support h2{
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  color: #0B1C30;
+  margin-bottom: 20px;
+}
+
+.learner-support h2 span{
+  color: #F07500;
+}
+
+.learner-support p{
+  font-size: 20px;
+  font-weight: 700;
+  color: #191C1D;
+  margin-bottom: 20px;
+}
+
+.support-cards{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.support-card{
+  width: 500px;
+  max-width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.support-card img{
+  width: 100%;
+  display: block;
+}
+
+/* =========================================
+ RESPONSIVE BREAKPOINTS
+========================================= */
+
+@media (max-width: 992px){
+  .awards-section{
+    padding: 60px 0;
+  }
+  .award-heading{
+    margin-bottom: 40px;
+  }
+  .award-heading h2{
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .award-wrapper{
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .award-left{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  .award-left img{
+    width: 280px;
+  }
+  .award-right{
+    width: 100%;
+  }
+  .award-cards{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .award-card{
+    flex: unset;
+    width: 280px;
+  }
+  .award-circle,
+  .award-circle-top,
+  .awards-section::before,
+  .awards-section::after{
+    display: none;
+  }
+  .slider-dots{
+    margin-top: 25px;
+  }
+  .learner-support{
+    padding: 70px 0 10px;
+  }
+  .learner-support h2{
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .learner-support p{
+    font-size: 18px;
+  }
+  .support-card{
+    width: 420px;
+  }
+}
+
+@media (max-width: 768px){
+  .awards-section{
+    padding: 50px 0;
+  }
+  .award-heading{
+    margin-bottom: 30px;
+  }
+  .award-heading h2{
+    font-size: 34px;
+    line-height: 44px;
+    letter-spacing: 0;
+  }
+  .award-wrapper{
+    gap: 30px;
+  }
+  .award-left{
+    display: none !important;
+  }
+  .award-cards{
+    flex-direction: column;
+    align-items: center;
+  }
+  .award-card{
+    width: 100%;
+    max-width: 340px;
+    padding: 22px;
+  }
+  .award-card img{
+    width: 70px;
+    height: 70px;
+  }
+  .award-card h4{
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .award-year{
+    font-size: 24px;
+  }
+  .learner-support{
+    padding: 60px 0 0;
+  }
+  .learner-support h2{
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .learner-support p{
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .support-cards{
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .support-card{
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px){
+  .award-heading h2{
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .award-card{
+    padding: 18px;
+  }
+  .award-card img{
+    width: 60px;
+    height: 60px;
+  }
+  .award-card h5{
+    font-size: 13px;
+  }
+  .award-card h4{
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .award-year{
+    font-size: 20px;
+  }
+  .award-card p{
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .learner-support h2{
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .learner-support p{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 359px) {
+  .awards-container {
+    padding: 0 12px;
+  }
+  .award-heading h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .learner-support h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .award-card {
+    padding: 14px;
+  }
+}

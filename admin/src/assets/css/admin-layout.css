@@ -1,0 +1,189 @@
+/* ================================
+   ADMIN LAYOUT - PREMIUM FIX
+================================ */
+
+.admin-layout {
+  width: 100%;
+  height: 100vh; /* min-height ki jagah strict 100vh, taaki main window scroll na ho */
+  display: flex;
+  background-color: var(--content-bg, #f7fafc);
+  overflow: hidden; /* Main window scrolling disabled */
+  transition: background-color 0.3s ease;
+}
+
+/* Dark Theme Support */
+[data-theme="dark"] .admin-layout {
+  background-color: #0f1116;
+}
+
+/* ================================
+   MAIN AREA
+   Sidebar 280px fixed hai
+================================ */
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+  margin-left: 280px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Isko bhi 100vh kiya */
+  background-color: var(--content-bg, #f7fafc);
+  transition: background-color 0.3s ease, margin-left 0.3s ease;
+}
+
+[data-theme="dark"] .admin-main {
+  background-color: #0f1116;
+}
+
+/* ================================
+   CONTENT AREA (SCROLLABLE)
+   Yahan scrolling logic set hai
+================================ */
+
+.admin-content {
+  flex: 1;
+  padding: 24px 0px;
+
+
+  background-color: var(--content-bg, #f7fafc);
+  
+  /* YAHI MAIN JADOO HAI: Sirf content scroll hoga, Header fixed rahega! */
+  overflow-y: auto; 
+  
+  transition: background-color 0.3s ease;
+  
+  /* Smooth modern scrollbar for content area */
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 transparent;
+}
+
+[data-theme="dark"] .admin-content {
+  background-color: #0f1116;
+  scrollbar-color: #3f4654 transparent;
+}
+
+.admin-content::-webkit-scrollbar {
+  width: 6px;
+}
+.admin-content::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+.admin-content::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e0;
+}
+
+[data-theme="dark"] .admin-content::-webkit-scrollbar-thumb {
+  background: #3f4654;
+}
+[data-theme="dark"] .admin-content::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+/* ================================
+   MOBILE OVERLAY
+================================ */
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 992px) {
+  .admin-main { margin-left: 260px; }
+}
+
+@media (max-width: 768px) {
+  .admin-main { margin-left: 0; }
+  .admin-content { padding: 16px; }
+}
+
+@media (max-width: 576px) {
+  .admin-content { padding: 12px; }
+}
+
+/* =================================
+   BREADCRUMB - PREMIUM STYLE
+================================= */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.breadcrumb-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-muted, #718096);
+  transition: all 0.2s ease;
+  background: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+[data-theme="dark"] .breadcrumb-home {
+  background: #1a1d29;
+  color: #94a3b8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.breadcrumb-home:hover {
+  color: #F6881F;
+  box-shadow: 0 2px 6px rgba(246, 136, 31, 0.15);
+  transform: translateY(-1px);
+}
+
+.breadcrumb-separator {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: var(--text-light, #a0aec0);
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: var(--text-muted, #718096);
+  transition: color 0.2s ease;
+}
+
+[data-theme="dark"] .breadcrumb-link {
+  color: #94a3b8;
+}
+
+.breadcrumb-link:hover {
+  color: #F6881F;
+}
+
+.breadcrumb-current {
+  font-weight: 600;
+  background: rgba(246, 136, 31, 0.1); /* Soft orange background */
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #F6881F;
+}
+
+[data-theme="dark"] .breadcrumb-current {
+  background: rgba(246, 136, 31, 0.2);
+}

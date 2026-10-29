@@ -1,0 +1,793 @@
+/* Study Abroad Advisor Modal Styles */
+
+.study-abroad-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.study-abroad-modal-container {
+  background: white;
+  border-radius: 20px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Container itself doesn't scroll */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.study-abroad-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.study-abroad-modal-close:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: rotate(90deg);
+}
+
+.study-abroad-modal-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  flex: 1;
+  overflow: hidden; /* Content wrapper doesn't scroll */
+}
+
+/* Left Section */
+.study-abroad-modal-left {
+  background: linear-gradient(135deg, #FFE5E5 0%, #FFF0F0 100%);
+  padding: 50px 40px;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto; /* Left section can also scroll if needed */
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for left section */
+.study-abroad-modal-left::-webkit-scrollbar {
+  width: 6px;
+}
+
+.study-abroad-modal-left::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px 0 0 20px;
+}
+
+.study-abroad-modal-left::-webkit-scrollbar-thumb {
+  background: rgba(255, 23, 68, 0.3);
+  border-radius: 3px;
+}
+
+.study-abroad-modal-left::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 23, 68, 0.5);
+}
+
+.study-abroad-modal-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+.dream-career {
+  color: #F5891F;
+  display: block;
+}
+
+.study-abroad-features {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.study-abroad-feature-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.feature-bullet {
+  color: #F5891F;
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.study-abroad-feature-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.study-abroad-feature-item p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.study-abroad-illustration {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  opacity: 0.8;
+}
+
+/* Right Section - Form */
+.study-abroad-modal-right {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Only right section scrolls */
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for right section */
+.study-abroad-modal-right::-webkit-scrollbar {
+  width: 6px;
+}
+
+.study-abroad-modal-right::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0 20px 20px 0;
+}
+
+.study-abroad-modal-right::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.study-abroad-modal-right::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+.study-abroad-form-header h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Steps Indicator */
+.study-abroad-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #E0E0E0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-circle {
+  background: #4CAF50;
+  color: white;
+}
+
+.step span {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+.step.active span {
+  color: #4CAF50;
+}
+
+.step-line {
+  flex: 1;
+  height: 2px;
+  background: #E0E0E0;
+  margin: 0 10px;
+  margin-bottom: 24px;
+}
+
+/* Form */
+.study-abroad-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input {
+  padding: 14px 18px;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #F5891F;
+  box-shadow: 0 0 0 3px rgba(255, 23, 68, 0.1);
+}
+
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.phone-input-wrapper:focus-within {
+  border-color: #F5891F;
+  box-shadow: 0 0 0 3px rgba(255, 23, 68, 0.1);
+}
+
+.country-code {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 15px;
+  background: #F5F5F5;
+  border-right: 1px solid #DDD;
+  height: 100%;
+  cursor: pointer;
+}
+
+.country-code img {
+  width: 20px;
+  height: auto;
+  border-radius: 2px;
+}
+
+.country-code span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.phone-input-wrapper input {
+  border: none;
+  padding: 14px 18px;
+  flex: 1;
+}
+
+.phone-input-wrapper input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.spam-notice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2196F3;
+  font-size: 13px;
+  margin-top: -5px;
+}
+
+.study-abroad-submit-btn {
+  background: #F5891F;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.study-abroad-submit-btn:hover:not(:disabled) {
+  background: #F5891F;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 23, 68, 0.3);
+}
+
+.study-abroad-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.study-abroad-terms {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-top: 15px;
+}
+
+.study-abroad-terms a {
+  color: #F5891F;
+  text-decoration: none;
+}
+
+.study-abroad-terms a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  background: #FFEBEE;
+  color: #F5891F;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  border-left: 3px solid #F5891F;
+}
+
+/* Success Message */
+.study-abroad-success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.study-abroad-success-message h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #4CAF50;
+  margin: 0;
+}
+
+.study-abroad-success-message p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .study-abroad-modal-content {
+    grid-template-columns: 1fr;
+    overflow-y: auto; /* On mobile, content scrolls */
+  }
+
+  .study-abroad-modal-left {
+    border-radius: 20px 20px 0 0;
+    padding: 30px 25px;
+    overflow-y: visible; /* No separate scroll on mobile */
+  }
+
+  .study-abroad-modal-right {
+    padding: 30px 25px;
+    overflow-y: visible; /* No separate scroll on mobile */
+  }
+
+  .study-abroad-modal-header h2 {
+    font-size: 24px;
+  }
+
+  .study-abroad-form-header h3 {
+    font-size: 20px;
+  }
+
+  .study-abroad-illustration {
+    display: none;
+  }
+
+  .study-abroad-steps {
+    gap: 10px;
+  }
+
+  .step-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .step span {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .study-abroad-modal-overlay {
+    padding: 10px;
+  }
+
+  .study-abroad-modal-container {
+    border-radius: 15px;
+  }
+
+  .study-abroad-modal-left,
+  .study-abroad-modal-right {
+    padding: 20px;
+  }
+
+  .study-abroad-modal-close {
+    width: 35px;
+    height: 35px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .study-abroad-feature-item {
+    gap: 10px;
+  }
+
+  .study-abroad-feature-item h3 {
+    font-size: 15px;
+  }
+
+  .study-abroad-feature-item p {
+    font-size: 13px;
+  }
+
+  .country-code {
+    padding: 0 10px;
+  }
+}
+
+
+/* Step Content Styles */
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.form-question {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-question label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Country Selection */
+.country-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.country-btn {
+  padding: 10px 20px;
+  border: 2px solid #E0E0E0;
+  background: white;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.country-btn:hover {
+  border-color: #F5891F;
+  color: #F5891F;
+}
+
+.country-btn.selected {
+  background: #1E293B;
+  color: white;
+  border-color: #1E293B;
+}
+
+/* Button Groups */
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.button-group-three {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.option-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #E0E0E0;
+  background: white;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.option-btn:hover {
+  border-color: #F5891F;
+  color: #F5891F;
+}
+
+.option-btn.selected {
+  background: #1E293B;
+  color: white;
+  border-color: #1E293B;
+}
+
+.button-group-three .option-btn {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* Select Input */
+.select-input {
+  padding: 14px 18px;
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  font-family: inherit;
+}
+
+.select-input:focus {
+  outline: none;
+  border-color: #F5891F;
+  box-shadow: 0 0 0 3px rgba(255, 23, 68, 0.1);
+}
+
+.select-input option {
+  padding: 10px;
+}
+
+/* Form Navigation */
+.form-navigation {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.back-btn,
+.continue-btn,
+.submit-btn {
+  flex: 1;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.back-btn {
+  background: #F5F5F5;
+  color: #666;
+}
+
+.back-btn:hover {
+  background: #E0E0E0;
+}
+
+.continue-btn,
+.submit-btn {
+  background: #F5891F;
+  color: white;
+}
+
+.continue-btn:hover:not(:disabled),
+.submit-btn:hover:not(:disabled) {
+  background: #F5891F;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 23, 68, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Step Circle with checkmark */
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #E0E0E0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-circle {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Responsive Updates */
+@media (max-width: 768px) {
+  .country-selection {
+    gap: 8px;
+  }
+
+  .country-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .button-group,
+  .button-group-three {
+    flex-direction: column;
+  }
+
+  .option-btn {
+    min-width: auto;
+  }
+
+  .form-navigation {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-content {
+    gap: 20px;
+  }
+
+  .form-question label {
+    font-size: 14px;
+  }
+
+  .option-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .select-input {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Selected Countries Display */
+.selected-countries-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.selected-country-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #F6881F, #F18D21);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(246, 136, 31, 0.2);
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.remove-country-btn {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  padding: 0;
+  line-height: 1;
+}
+
+.remove-country-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}

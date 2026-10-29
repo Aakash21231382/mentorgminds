@@ -1,0 +1,400 @@
+/* =====================================================
+   FOOTER — Professional Responsive Layout
+===================================================== */
+
+.footer-section {
+  background-color: #121824;
+  color: #a0aec0;
+  padding: 60px 0 0 0;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (min-width: 1600px) {
+  .footer-container {
+    max-width: 1850px;
+    padding: 0 3%;
+  }
+}
+
+/* =====================================================
+   MAIN CONTENT ROW
+===================================================== */
+.footer-main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+/* =====================================================
+   BRAND COLUMN (Left)
+===================================================== */
+.footer-brand-col {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  width: 50px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.footer-logo-text h1 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.footer-logo-text span {
+  color: #8c9bae;
+  font-size: 11px;
+}
+
+/* Social Icons */
+.footer-social-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background-color: #242d3d;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.social-icon.facebook:hover  { background-color: #1877f2; transform: translateY(-2px); }
+.social-icon.twitter:hover   { background-color: #000000; transform: translateY(-2px); }
+.social-icon.linkedin:hover  { background-color: #0a66c2; transform: translateY(-2px); }
+.social-icon.youtube:hover   { background-color: #ff0000; transform: translateY(-2px); }
+.social-icon.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #df3484 45%, #7624cb 90%);
+  transform: translateY(-2px);
+}
+
+/* App Section */
+.app-title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.app-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-badge {
+  width: 135px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.app-badge:hover { opacity: 0.85; }
+
+/* =====================================================
+   COURSES WRAPPER (Right — 4 columns)
+===================================================== */
+.footer-courses-wrapper {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 24px;
+}
+
+.footer-links-col {
+  min-width: 0;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 10px;
+}
+
+.footer-links-list li a {
+  color: #8c9bae;
+  text-decoration: none;
+  font-size: 13.5px;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.footer-links-list li a:hover { color: #ffffff; }
+
+/* =====================================================
+   FOOTER BOTTOM BAR
+===================================================== */
+.footer-bottom-wrapper {
+  background-color: #151C28;
+  width: 100%;
+  padding-bottom: 28px;
+}
+
+.footer-full-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+}
+
+.footer-bottom-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-bottom-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 14px;
+}
+
+.footer-bottom-nav li a {
+  color: #8c9bae;
+  text-decoration: none;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-nav li a:hover { color: #ffffff; }
+
+.footer-bottom-nav .separator {
+  color: #3a4558;
+  font-size: 12px;
+}
+
+/* =====================================================
+   TABLET (max-width: 992px)
+===================================================== */
+@media (max-width: 992px) {
+  .footer-container {
+    padding: 0 24px;
+  }
+
+  .footer-main-content {
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* Brand col — centered on tablet */
+  .footer-brand-col {
+    flex: unset;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo-wrapper {
+    justify-content: center;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+  }
+
+  .app-links {
+    align-items: center;
+  }
+
+  /* 4 columns → 2 columns on tablet */
+  .footer-courses-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+
+  .footer-links-col {
+    text-align: left;
+  }
+
+  .footer-bottom-wrapper {
+    padding: 20px 0 24px;
+  }
+}
+
+/* =====================================================
+   MOBILE (max-width: 600px)
+===================================================== */
+@media (max-width: 600px) {
+  .footer-section {
+    padding: 48px 0 0;
+  }
+
+  .footer-container {
+    padding: 0 20px;
+  }
+
+  .footer-main-content {
+    gap: 36px;
+    padding-bottom: 32px;
+  }
+
+  /* Brand col — centered on mobile too */
+  .footer-brand-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo-wrapper {
+    justify-content: center;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+  }
+
+  .app-links {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* 2 columns → 2 columns on small mobile too */
+  .footer-courses-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
+  }
+
+  .footer-links-col {
+    text-align: left;
+  }
+
+  .footer-heading {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .footer-links-list li {
+    margin-bottom: 8px;
+  }
+
+  .footer-links-list li a {
+    font-size: 13px;
+  }
+
+  .footer-bottom-nav .separator {
+    display: none;
+  }
+
+  .footer-bottom-nav {
+    gap: 8px 12px;
+  }
+
+  .footer-bottom-nav li a {
+    font-size: 11px;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE (320px - 389px)
+===================================================== */
+@media (max-width: 389px) {
+  .footer-container {
+    padding: 0 14px;
+  }
+
+  .footer-logo-text h1 {
+    font-size: 13px;
+  }
+
+  .app-badge {
+    width: 120px;
+  }
+
+  .footer-courses-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px 12px;
+  }
+}
+
+@media (max-width: 359px) {
+  .footer-container {
+    padding: 0 10px;
+  }
+  
+  .footer-logo-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =====================================================
+   FOOTER SKELETON LOADER
+===================================================== */
+@keyframes footer-shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.footer-skeleton-heading,
+.footer-skeleton-link {
+  border-radius: 4px;
+  background: linear-gradient(90deg, #1e2a3a 25%, #263245 50%, #1e2a3a 75%);
+  background-size: 400px 100%;
+  animation: footer-shimmer 1.4s infinite linear;
+}
+
+.footer-skeleton-heading {
+  width: 70%;
+  height: 16px;
+  margin-bottom: 18px;
+}
+
+.footer-skeleton-link {
+  width: 90%;
+  height: 12px;
+  margin-bottom: 12px;
+}

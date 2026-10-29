@@ -1,0 +1,267 @@
+/* =====================================================
+   SERVICES TO HELP YOU ACHIEVE YOUR GOAL SECTION (Fully Responsive)
+===================================================== */
+.achieve-goals-section {
+  width: 100%;
+  padding: 80px 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.achieve-goals-container {
+  width: 100%;
+  max-width: 1440px; /* 1920px screens par over-stretch hone se rokne ke liye standard container */
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+.achieve-goals-header {
+  margin-bottom: 35px;
+}
+
+.achieve-goals-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: -1.2px;
+  margin-bottom: 12px;
+}
+
+.achieve-goals-header h2 span {
+  color: #FF6E06;
+}
+
+.achieve-goals-header p {
+  font-size: 15px;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* Clickable Tabs Buttons Wrapper */
+.goals-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.goal-tab-btn {
+  border: 1px solid #DFDFDF;
+  border-radius: 10px;
+  padding: 10px 24px;
+  min-height: 44px;
+  height: auto;
+  font-size: 15px;
+  font-weight: 500;
+  color: #6B7280;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  background: #ffffff;
+}
+
+.goal-tab-btn:hover {
+  border-color: #FF6E06;
+  color: #FF6E06;
+}
+
+.goal-tab-btn.active {
+  background: #FFF5EE;
+  border-color: #FAD5C5;
+  color: #1A1A1A;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(255, 110, 6, 0.08);
+}
+
+.goal-tab-btn.active .point-icon {
+  color: #FF6E06;
+  font-size: 14px;
+}
+
+/* Main Content Box (Grid Layout) */
+.goals-content-box {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Left Side Video Banner Card */
+.goal-video-card {
+  width: 100%;
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  overflow: hidden;
+  box-shadow: rgb(38, 57, 77) 0px 15px 25px -10px;
+  box-sizing: border-box;
+}
+
+.video-overlay-content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.video-overlay-content p {
+  font-size: 15px;
+  color: #E5E7EB;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Play Button Circle */
+.play-btn-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.goal-video-card:hover .play-btn-circle {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* Right Side Dynamic Info */
+.goal-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.info-tag {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FF6E06;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.goal-info-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #191C1D;
+  margin-bottom: 10px;
+}
+
+.info-points-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.point-icon {
+  color: #FF6E06;
+  font-size: 16px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.info-point-item p {
+  font-size: 14px;
+  color: #555555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN FOR ALL SCREENS
+===================================================== */
+@media (max-width: 1200px) {
+  .achieve-goals-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .goals-content-box {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 10px 0;
+  }
+  .achieve-goals-header h2 {
+    font-size: 36px;
+  }
+  .goal-video-card {
+    height: 300px;
+  }
+  .goal-info-content {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .achieve-goals-section {
+    padding: 50px 0;
+  }
+  .achieve-goals-container {
+    padding: 0 15px;
+  }
+  .achieve-goals-header h2 {
+    font-size: 26px;
+  }
+  .goal-video-card {
+    height: 240px;
+    padding: 20px;
+  }
+  .video-overlay-content h3 {
+    font-size: 20px;
+  }
+  .goal-info-content h3 {
+    font-size: 20px;
+  }
+  .goal-tab-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 359px) {
+  .achieve-goals-header h2 {
+    font-size: 22px;
+  }
+  .goal-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

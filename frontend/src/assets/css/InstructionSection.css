@@ -1,0 +1,364 @@
+/* ==========================================
+   INSTRUCTION SECTION
+========================================== */
+
+.instruction-section {
+  width: 100%;
+  padding: 90px 0;
+  background: #fff;
+  overflow: hidden; 
+}
+
+/* 1. Normal laptops ke liye default */
+.instruction-container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+/* 2. Badi screens (1600px+) ke liye auto-stretch */
+@media (min-width: 1600px) {
+  .instruction-container {
+    padding: 0 3%;
+  }
+}
+
+.instruction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.instruction-tag {
+  display: inline-block;
+  background: #389444;
+  color: #fff;
+  font-size: 16px;
+  min-height: 38px;
+  height: auto;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+}
+
+.instruction-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -1.2px;
+}
+
+.instruction-header h2 span {
+  color: #F07500;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+}
+
+.view-course {
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #191C1D;
+  opacity: 0.6;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.view-course:hover {
+  color: #F07500;
+}
+
+/* ==========================================
+   WRAPPER & SWIPER
+========================================== */
+
+.instruction-wrapper {
+  position: relative;
+}
+
+.instruction-swiper {
+  width: 100%;
+  /* Padding added to prevent box-shadow cut off during slide */
+  padding: 20px 0 !important;
+  margin: -20px 0 !important;
+  overflow: hidden;
+}
+
+.instruction-card {
+  border-radius: 14px;
+  padding: 28px 0px;
+  border: 1px solid #EAEAEA;
+  text-align: center;
+  height: 100%;
+  transition: .3s;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.card-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: .45;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.teacher-image,
+.instruction-card h3,
+.instruction-card h4,
+.working,
+.teacher-desc,
+.instruction-card h5,
+.social-icons {
+  position: relative;
+  z-index: 2;
+}
+
+.instruction-card:hover {
+  transform: translateY(-6px);
+
+}
+
+.instruction-card.blue {
+  background: linear-gradient(180deg,#EEF2FF 0%,#FDFDFD 100%);
+}
+
+.instruction-card.cyan {
+  background: linear-gradient(180deg,#EAF9FF 0%,#FDFDFD 100%);
+}
+
+.instruction-card.green {
+  background: linear-gradient(180deg,#ECFFF0 0%,#FDFDFD 100%);
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.teacher-image {
+  width: 133px;
+  height: 133px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 2px solid white;
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.instruction-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #191C1D;
+  margin-bottom: 8px;
+}
+
+.instruction-card h4 {
+  font-size: 16px;
+  color: #191C1D;
+  margin-bottom: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.card-desc {
+  padding: 0 28px;
+}
+
+.working {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #191C1D;
+}
+
+.working img {
+  width: 64px;
+  height: auto;
+  margin: 0;
+}
+
+.teacher-desc {
+  font-size: 14px;
+  line-height: 24px;
+  color: #191C1D;
+  opacity: 0.7;
+  text-align: left;
+  min-height: 70px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.instruction-card h5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   SOCIAL ICONS
+========================================== */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.social-icons span,
+.social-icons a {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-icons span svg,
+.social-icons a svg {
+  color: inherit;
+  font-size: 12px;
+}
+
+.social-icons .facebook { background: #1877F2; color: #fff; }
+.social-icons .twitter  { background: #000;    color: #fff; }
+.social-icons .linkedin { background: #0A66C2; color: #fff; }
+.social-icons .youtube  { background: #FF0000; color: #fff; }
+
+/* ==========================================
+   ARROWS
+========================================== */
+
+.instruction-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.instruction-arrow.left {
+  left: -28px; 
+  background: #fff;
+  color: #666;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.12);
+}
+
+.instruction-arrow.left:hover {
+  background: #f5f5f5;
+}
+
+.instruction-arrow.right {
+  right: -28px; 
+  background: #1a1a1a;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.instruction-arrow.right:hover {
+  background: #F07500;
+}
+
+/* ==========================================
+   SWIPER SLIDER DOTS — dedicated .instr-dots
+========================================== */
+
+.instr-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.instr-dots .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #D9D9D9;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 1 !important;
+  margin: 0 !important;
+}
+
+.instr-dots .swiper-pagination-bullet-active {
+  width: 25px;
+  height: 8px;
+  background: #F07500;
+  border-radius: 20px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+  .instruction-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+  .instruction-header h2{
+    font-size:38px;
+  }
+  .instruction-arrow{
+    display:none; /* Tablet me arrows hide kiye gaye hain as per your code */
+  }
+}
+
+@media(max-width:768px){
+  .instruction-header h2{
+    font-size:30px;
+  }
+  .teacher-image{
+    width:85px;
+    height:85px;
+  }
+  .social-icons{
+    gap:5px;
+    
+  }
+  .social-icons a{
+   width: 20px;
+   height: 20px;
+  }
+}

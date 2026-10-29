@@ -1,0 +1,334 @@
+
+
+
+
+/* ══════════════════════════════════════════════════
+   SUBSCRIPTION BANNER
+══════════════════════════════════════════════════ */
+
+.sub-banner {
+  width: 100%;
+  background: #182331;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Decorative dark circles (background) ── */
+.sub-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+/* LEFT BIG RING */
+.sub-circle-1{
+    position:absolute;
+    width:520px;
+    height:535px;
+    left:-300px;
+    top:57%;
+    transform:translateY(-50%);
+    border:120px solid rgba(255,255,255,.035);
+    border-radius:50%;
+}
+
+/* TOP CENTER RING */
+.sub-circle-2{
+    position:absolute;
+    width:500px;
+    height:500px;
+    left:450px;
+    top:-280px;
+    border:45px solid rgba(255,255,255,.03);
+    border-radius:50%;
+}
+
+
+/* .sub-banner::before{
+  content:"";
+  position:absolute;
+  width:270px;
+  height:270px;
+  right:-120px;
+  top:40px;
+  border:55px solid rgba(255,255,255,.03);
+  border-radius:50%;
+} */
+
+.sub-banner::after{
+  content:"";
+  position:absolute;
+  width:380px;
+  height:380px;
+  right:-120px;
+  bottom:-150px;
+  border:100px solid rgba(255,255,255,.03);
+  border-radius:50%;
+}
+
+.sub-dots{
+  position:absolute;
+  left:18px;
+  bottom:220px;
+  width:60px;
+  height:60px;
+
+  background-image:radial-gradient(rgba(255,255,255,.18) 1.5px, transparent 1.5px);
+  background-size:8px 8px;
+
+  opacity:.5;
+}
+
+/* ── Inner flex container ── */
+.sub-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  min-height:660px;
+}
+
+/* ── Sirf badi screens (1920px+) ke liye auto-stretch ── */
+@media (min-width: 1600px) {
+  .sub-inner {
+    padding: 0 3%;
+  }
+}
+
+/* ══════════════════════════════════════════════════
+   LEFT CONTENT
+══════════════════════════════════════════════════ */
+.sub-content {
+  flex: 1;
+  max-width: 570px;
+  margin-bottom: 50px;
+}
+
+.sub-content h2 {
+  font-size: 48px;
+  font-weight: 700;
+  font: bold;
+  color: #ffffff;
+  line-height: 60px;
+  margin-bottom: 18px;
+  letter-spacing: -1.2px;
+}
+
+.sub-desc {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 500;
+  line-height:33px;
+  margin-bottom: 28px;
+  max-width: 420px;
+}
+
+/* ── Feature grid (2 columns) ── */
+.sub-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+  min-height: auto;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.sub-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.sub-feature-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: black;
+  flex-shrink: 0;
+}
+
+/* ── Register Button ── */
+.sub-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  height: auto;
+  padding: 12px 32px;
+  background: #F07500;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-bottom: 50px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.sub-btn:hover {
+  background: #e06d00;
+}
+
+
+.sub-image{
+  position:relative;
+  width:500px;
+  align-self:flex-end;
+}
+
+.sub-image img{
+  width: 580px;
+  height: auto;
+  display: block;
+  position: relative;
+  bottom: 0;
+  margin-bottom: -12px;
+  margin-left: -40px;
+
+}
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width: 992px) {
+  .sub-banner{
+    padding:60px 20px 0;
+  }
+  .sub-inner{
+    min-height:auto;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:40px;
+  }
+  .sub-content{
+    max-width:100%;
+    margin-bottom:0;
+  }
+  .sub-desc{
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .sub-features{
+    justify-items:center;
+    gap:18px;
+    margin-bottom:35px;
+  }
+  .sub-feature-item{
+    justify-content:center;
+  }
+  .sub-btn{
+    margin-bottom:20px;
+  }
+  .sub-image{
+    width:100%;
+    height:420px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+  }
+  .sub-image img{
+    position:relative;
+    width:420px;
+    height:auto;
+  }
+  .sub-circle-1,
+  .sub-circle-2,
+  .sub-banner::after,
+  .sub-dots{
+    display:none;
+  }
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width:768px){
+  .sub-banner{
+    padding:50px 16px 0;
+  }
+  .sub-inner{
+    gap:35px;
+  }
+  .sub-content h2{
+    font-size:38px;
+    line-height:48px;
+  }
+  .sub-desc{
+    font-size:17px;
+    line-height:30px;
+  }
+  .sub-features{
+    grid-template-columns:1fr;
+    gap:16px;
+    height:auto;
+  }
+  .sub-btn{
+    width:100%;
+    max-width:260px;
+    justify-content:center;
+  }
+  .sub-image{
+    height:360px;
+  }
+  .sub-image img{
+    width:360px;
+  }
+}
+
+/* =========================================
+   Small Mobile
+========================================= */
+
+@media (max-width:480px){
+  .sub-banner{
+    padding:40px 15px 0;
+  }
+  .sub-content h2{
+    font-size:30px;
+    line-height:40px;
+    letter-spacing:0;
+  }
+  .sub-desc{
+    font-size:15px;
+    line-height:26px;
+  }
+  .sub-feature-item{
+    font-size:16px;
+    justify-content:flex-start;
+  }
+  .sub-feature-icon{
+    width:30px;
+    height:30px;
+    font-size:18px;
+  }
+  .sub-btn{
+    width:100%;
+    height:55px;
+    padding:16px;
+    margin-bottom:10px;
+  }
+  .sub-image{
+    height:280px;
+  }
+  .sub-image img{
+    width:290px;
+  }
+}

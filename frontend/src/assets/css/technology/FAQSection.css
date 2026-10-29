@@ -1,0 +1,280 @@
+/* =====================================================
+   FAQ SECTION STYLING (Fully Responsive for 1920px & Mobile)
+===================================================== */
+.faq-section {
+  width: 100%;
+  padding: 80px 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 1440px; /* 1920px screens par zyada stretch hone se rokne ke liye standard max-width */
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.faq-main-header {
+  margin-bottom: 50px;
+}
+
+.faq-main-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: -1.2px;
+}
+
+.faq-main-header h2 span {
+  color: #FF6E06;
+}
+
+/* Layout Grid */
+.faq-content-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr; /* Badi screens par sidebar ke liye fix width, baaki area answer ke liye */
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* Sidebar (Questions Box) */
+.faq-sidebar {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  padding: 20px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.faq-search-box {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #D1D5DB;
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+
+.faq-search-icon {
+  color: #9CA3AF;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.faq-search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #1A1A1A;
+  width: 100%;
+}
+
+.faq-questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 6px;
+}
+
+/* Scrollbar styling */
+.faq-questions-list::-webkit-scrollbar,
+.faq-details-inner::-webkit-scrollbar {
+  width: 5px;
+}
+
+.faq-questions-list::-webkit-scrollbar-thumb,
+.faq-details-inner::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 10px;
+}
+
+.faq-question-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.faq-question-item:hover {
+  background: #F3F4F6;
+}
+
+.faq-question-item.active {
+  background: #FF6E06;
+  color: #ffffff;
+}
+
+.faq-number {
+  width: 24px;
+  height: 24px;
+  background: #E5E7EB;
+  color: #374151;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.faq-question-item.active .faq-number {
+  background: #ffffff;
+  color: #FF6E06;
+}
+
+.faq-q-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.no-result {
+  text-align: center;
+  color: #6B7280;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+/* =====================================================
+   RIGHT DETAILS AREA (Fixed Outer Card with Inner Scroll)
+===================================================== */
+.faq-details-area {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 20px;
+  height: 600px;
+  box-sizing: border-box;
+  overflow: hidden; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inner scroll container */
+.faq-details-inner {
+  padding: 35px;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.faq-details-inner h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 20px;
+}
+
+.faq-details-inner h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 20px 0 10px 0;
+}
+
+.faq-details-inner h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 20px 0 10px 0;
+}
+
+.faq-details-inner p {
+  font-size: 15px;
+  color: #4B5563;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.faq-answer-bullets {
+  list-style-type: disc;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.faq-answer-bullets li {
+  font-size: 15px;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN FOR ALL SCREENS
+===================================================== */
+@media (max-width: 1200px) {
+  .faq-container {
+    padding: 0 20px;
+  }
+  .faq-content-layout {
+    grid-template-columns: 350px 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .faq-content-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .faq-sidebar {
+    height: 450px; /* Tablet view ke liye height adjust */
+  }
+  .faq-details-area {
+    height: 500px;
+  }
+  .faq-main-header h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-section {
+    padding: 50px 0;
+  }
+  .faq-container {
+    padding: 0 15px;
+  }
+  .faq-main-header h2 {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+  }
+  .faq-sidebar {
+    height: 400px;
+    padding: 15px;
+  }
+  .faq-details-area {
+    height: 450px;
+  }
+  .faq-details-inner {
+    padding: 20px;
+  }
+  .faq-details-inner h3 {
+    font-size: 18px;
+  }
+  .faq-details-inner p, 
+  .faq-answer-bullets li {
+    font-size: 14px;
+  }
+}

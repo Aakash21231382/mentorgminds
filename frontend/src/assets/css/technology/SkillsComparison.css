@@ -1,0 +1,137 @@
+/* =====================================================
+   SKILLS YOU'LL ACQUIRE SECTION
+===================================================== */
+.skills-comp-section {
+  width: 100%;
+  padding: 50px 0;
+  /* background: #fdfdfd; */
+  position: relative;
+}
+
+.skills-comp-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styling */
+.skills-comp-header {
+  margin-bottom: 50px;
+}
+
+.skills-comp-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: -1.2px;
+}
+
+.skills-comp-header h2 span {
+  color: #FF6E06;
+}
+
+/* Grid Layout (2 Cards Side by Side) */
+.skills-comp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Individual Card */
+.skills-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  min-height: 366px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eaeaea;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-card:hover {
+  box-shadow: 0 15px 35px rgba(255, 110, 6, 0.08);
+  border-color: #f7d2b5;
+}
+
+/* Card Titles */
+.skills-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FF6E06;
+  margin-bottom: 8px;
+}
+
+.card-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 25px;
+}
+
+/* Skills List */
+.skills-list {
+  list-style: none;
+  padding: 10px 0px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #444444;
+  font-weight: 500;
+}
+
+/* Check Icon Box */
+.skill-check-icon {
+  width: 22px;
+  height: 22px;
+  background: #FF6E06;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN FOR ALL SCREENS
+===================================================== */
+@media (max-width: 992px) {
+  .skills-comp-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-comp-header h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-comp-section {
+    padding: 60px 0;
+  }
+  .skills-comp-header h2 {
+    font-size: 28px;
+  }
+  .skills-card {
+    padding: 24px;
+  }
+  .skills-card h3 {
+    font-size: 22px;
+  }
+  .card-subtitle {
+    font-size: 14px;
+  }
+  .skills-list li {
+    font-size: 14px;
+  }
+}

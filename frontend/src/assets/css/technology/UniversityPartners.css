@@ -1,0 +1,361 @@
+/* =====================================================
+   UNIVERSITY PARTNERS SECTION
+===================================================== */
+.uni-partners-section {
+  width: 100%;
+  background: #F2F9FF;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.uni-partners-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+}
+
+/* ================= LEFT SIDE ================= */
+.uni-partners-left {
+  width: 50%;
+  padding-bottom: 50px;
+}
+
+.uni-partners-left h2 {
+  font-size: 60px;
+  line-height: 60px;
+  color: #191C1D;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+}
+
+.uni-partners-left h2 span {
+  color: #F07500;
+}
+
+.uni-partners-left p {
+  color: #666;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ================= RIGHT SIDE ================= */
+.uni-partners-right {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px 20px; 
+}
+
+.uni-logo-box {
+  height: 75px; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: none;
+}
+
+.uni-logo-box img {
+  max-width: 140px;
+  max-height: 60px;
+  /* width: 100%; */
+  object-fit: contain;
+}
+
+/* Slider Dots */
+.uni-partners-right .uni-slider-dots {
+  grid-column: 1 / -1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.uni-slider-dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #F8B58A;
+}
+
+.uni-slider-dots .dot.active {
+  width: 20px;
+  border-radius: 20px;
+  background: #F07500;
+}
+
+/* ================= BACKGROUND DECORATIONS ================= */
+.uni-left-circle {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 25px solid #E4F3FF;
+  border-radius: 50%;
+  left: -110px;
+  top: -20px;
+}
+
+.uni-right-circle {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 5px solid #E4F3FF;
+  border-radius: 50%;
+  right: -120px;
+  top: 150px;
+}
+
+.uni-right-circle-small{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #E4F3FF;
+    border-radius: 50%;
+    right: -120px;
+    top: 175px;
+}
+
+.uni-dot-pattern {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 20px;
+  bottom: 40px;
+  background-image: radial-gradient(#C7DCEC 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 992px) {
+  .uni-partners-section {
+    padding: 70px 20px;
+  }
+  
+  .uni-partners-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .uni-partners-left,
+  .uni-partners-right {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .uni-partners-right {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+  
+  .uni-logo-box {
+    justify-content: center;
+  }
+  
+  .uni-left-circle,
+  .uni-right-circle,
+  .uni-dot-pattern {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .uni-partners-section {
+    padding: 60px 16px;
+  }
+  
+  .uni-partners-left h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  
+  .uni-partners-right {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .uni-partners-section {
+    padding: 50px 15px;
+  }
+  
+  .uni-partners-left h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .uni-partners-right {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   AI READINESS SECTION
+===================================================== */
+.ai-readiness-section {
+  width: 100%;
+  background: #ffffff; /* Clean white background */
+  padding: 90px 0;
+  position: relative;
+}
+
+/* Header Styling */
+.ai-readiness-header {
+  margin-bottom: 50px;
+}
+
+.ai-readiness-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1A1A1A;
+  font: bold;
+  margin-bottom: 12px;
+  letter-spacing: -1.2px;
+}
+
+.ai-readiness-header h2 span {
+  color: #FF6E06;
+}
+
+.ai-readiness-header p {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Cards Row & Design */
+.ai-cards-row {
+  margin-bottom: 45px;
+}
+
+.ai-readiness-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(25, 25, 25, 0.2);
+  border: 1px solid #f0f0f0;
+  /* height: 100%; */
+  max-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-readiness-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(240, 117, 0, 0.08);
+}
+
+/* Icon Circle Background */
+.icon-circle {
+  width: 90px;
+  height: 90px;
+  background: #FFF5EE; /* Light peach/orange tint matching the image */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 25px; */
+}
+/* .icon-circle img{
+    width: 45px;
+    height: 45px;
+} */
+/* .readiness-icon {
+  font-size: 30px;
+  color: #F07500;
+} */
+
+.ai-readiness-card h4 {
+  font-size: 18px;
+  padding-top: 20px;
+  font-weight: 700;
+  color: #191C1D;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Bottom CTA Button */
+.ai-readiness-btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+.check-readiness-btn {
+  background: #F07500;
+  color: #ffffff;
+  border: none;
+  min-width: 250px;
+  max-height: 45px;
+  border-radius: 12px;
+  padding: 12px 36px;
+  font-size: 14px;
+  font-weight: 700;
+  font: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(240, 117, 0, 0.25);
+}
+
+.check-readiness-btn:hover {
+  background: #d66800;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 992px) {
+  .ai-readiness-section {
+    padding: 70px 0;
+  }
+  .ai-readiness-header h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-readiness-section {
+    padding: 50px 0;
+  }
+  .ai-readiness-header h2 {
+    font-size: 30px;
+  }
+  .ai-readiness-header p {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+  .ai-readiness-card {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,261 @@
+/* =====================================================
+   💰 PROGRAM PRICING & ADMISSION SECTION (LIGHT THEME)
+===================================================== */
+
+.pricing-section {
+  padding: 80px 0;
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.pricing-header-center {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px auto;
+}
+
+.pricing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFF5EB;
+  color: #FF6E06;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  border: 1px solid #FFD8B3;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pricing-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #0F172A;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.pricing-subtitle {
+  font-size: 16px;
+  color: #64748B;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Pricing Card Grid */
+.pricing-card-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px -12px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+}
+
+/* Left Summary Column */
+.pricing-card-left {
+  background: #FFFFFF;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #F1F5F9;
+}
+
+.pricing-tag-live {
+  font-size: 12px;
+  font-weight: 800;
+  color: #059669;
+  background: #ECFDF5;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.pricing-prog-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.pricing-amount-box {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.pricing-current-price {
+  font-size: 42px;
+  font-weight: 900;
+  color: #0F172A;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.pricing-original-price {
+  font-size: 22px;
+  font-weight: 600;
+  color: #94A3B8;
+  text-decoration: line-through;
+}
+
+.pricing-discount-badge {
+  font-size: 13px;
+  font-weight: 800;
+  color: #15803D;
+  background: #DCFCE7;
+  padding: 3px 8px;
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+.pricing-emi-text {
+  font-size: 13px;
+  color: #64748B;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Action Buttons */
+.pricing-actions-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-pricing-enroll {
+  background: linear-gradient(135deg, #FF6E06 0%, #EA580C 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(255, 110, 6, 0.3);
+  text-decoration: none;
+}
+
+.btn-pricing-enroll:hover {
+  background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+.btn-pricing-expert {
+  background: #FFFFFF;
+  color: #334155;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.btn-pricing-expert:hover {
+  background: #F8FAFC;
+  border-color: #94A3B8;
+  color: #0F172A;
+}
+
+/* Right Features Checklist Column */
+.pricing-card-right {
+  background: #FAFBFD;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pricing-features-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 20px;
+}
+
+.pricing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pricing-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #334155;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.feature-check-icon {
+  color: #10B981;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Trust Badges Bar */
+.pricing-trust-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid #E2E8F0;
+  font-size: 12px;
+  color: #64748B;
+  font-weight: 600;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pricing-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-card-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card-left {
+    border-right: none;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 28px;
+  }
+  .pricing-card-right {
+    padding: 28px;
+  }
+}

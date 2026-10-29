@@ -1,0 +1,326 @@
+/* =====================================================
+   CURRICULUM COMPARISON SECTION
+===================================================== */
+.curriculum-comp-section {
+  width: 100%;
+  padding: 80px 0;
+  position: relative;
+
+}
+
+.curriculum-comp-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Header Styling */
+.curriculum-comp-header {
+  margin-bottom: 50px;
+}
+
+.curriculum-comp-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.curriculum-comp-header h2 span {
+  color: #FF6E06;
+}
+
+/* Toggle Switcher Box */
+.comp-toggle-box {
+  display: inline-flex;
+  background: #FFF1E6;
+  border: 1px solid #FAD5C5;
+  border-radius: 14px;
+  padding: 6px;
+  gap: 6px;
+  max-width: 650px;
+  width: 100%;
+}
+
+.toggle-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn .sub-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #777777;
+  letter-spacing: 0.5px;
+}
+
+.toggle-btn .main-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #333333;
+}
+
+/* Active State for Toggle Buttons */
+.toggle-btn.active {
+  background: #FF6E06;
+  box-shadow: 0 4px 15px rgba(255, 110, 6, 0.25);
+}
+
+.toggle-btn.active .sub-title,
+.toggle-btn.active .main-title {
+  color: #ffffff;
+}
+
+/* Comparison Grid Layout (2 Columns) */
+.comparison-content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.comp-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Column Header */
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.column-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #191C1D;
+  margin: 0;
+}
+
+.column-header h3 span {
+  color: #FF6E06;
+}
+
+.track-badge {
+  background: #FFF1E6;
+  border: 1px solid #FAD5C5;
+  color: #FF6E06;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+/* Cards List */
+.comp-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =====================================================
+   FIXED SIZE CARD WITH PEACH CORNER GLOW EFFECT
+===================================================== */
+.comp-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eaeaea;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  min-height: 190px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  /* YAHAN ANIMATION ADD KI HAI SWIPER WALE FEEL KE LIYE */
+  animation: swipeInEffect 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* Peach Corner Glow Effect in top-right corner */
+.comp-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at top right, rgba(255, 235, 220, 0.7), transparent 70%);
+  pointer-events: none;
+  border-top-right-radius: 20px;
+}
+
+.comp-card:hover {
+  box-shadow: 0 10px 25px rgba(255, 110, 6, 0.08);
+  border-color: #f7d2b5;
+}
+
+/* Icon Box */
+.card-icon-box {
+  width: 50px;
+  height: 50px;
+  background: #FF6E06;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.card-icon-box img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* Card Info */
+.card-info {
+  flex-grow: 1;
+  z-index: 2;
+}
+
+.card-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #191C1D;
+  margin-bottom: 8px;
+}
+
+.card-info p {
+  font-size: 16px;
+  color: #191C1D;
+  opacity: .6;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Card Meta Details */
+.card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 13px;
+  color: #555555;
+}
+
+.card-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #777777;
+}
+
+.card-meta svg {
+  color: #FF6E06;
+}
+
+/* =====================================================
+   SWIPE IN ANIMATION (Yahi Swiper ka feel dega)
+===================================================== */
+@keyframes swipeInEffect {
+  0% {
+    opacity: 0;
+    transform: translateX(40px); /* Card side se aayega */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Apni original position par */
+  }
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN FOR ALL SCREENS
+===================================================== */
+@media (max-width: 1200px) {
+  .curriculum-comp-container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 992px) {
+  .comparison-content-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .curriculum-comp-header h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .curriculum-comp-section {
+    padding: 60px 0;
+  }
+  .curriculum-comp-header h2 {
+    font-size: 30px;
+  }
+  .comp-toggle-box {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .toggle-btn {
+    padding: 10px 14px;
+  }
+}
+
+.comp-empty-msg {
+  color: #aaa;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+@media (max-width: 576px) {
+  .curriculum-comp-header h2 {
+    font-size: 26px;
+  }
+  .comp-card {
+    padding: 20px;
+    flex-direction: column;
+    min-height: auto;
+    gap: 15px;
+  }
+  .card-icon-box {
+    width: 44px;
+    height: 44px;
+  }
+  .card-info h4 {
+    font-size: 18px;
+  }
+  .card-info p {
+    font-size: 14px;
+  }
+  .card-meta {
+    gap: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 359px) {
+  .curriculum-comp-header h2 {
+    font-size: 22px;
+  }
+  .comp-card {
+    padding: 16px 12px;
+  }
+}

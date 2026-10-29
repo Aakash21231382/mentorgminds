@@ -1,0 +1,238 @@
+/* =====================================================
+   COURSE PROJECTS SECTION
+===================================================== */
+.course-projects-section {
+  width: 100%;
+  padding: 80px 0;
+  position: relative;
+}
+
+.course-projects-container {
+  position: relative;
+}
+
+/* Header Styling */
+.course-projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.course-projects-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1A1A1A;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.course-projects-header h2 span {
+  color: #FF6E06;
+}
+
+/* Projects 10+ Badge */
+.projects-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #191C1D;
+}
+
+.projects-badge span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #191C1D;
+}
+
+.badge-icon {
+  color: #F07500;
+  font-size: 18px;
+}
+
+.projects-badge strong {
+  color: #F07500;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Projects List */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Project Card */
+.course-projects-section .project-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 25px 30px;
+  box-shadow: 0px 4px 30px 0px rgba(35, 31, 32, 0.1);
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: row !important;
+  min-height: 200px;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.3s ease;
+}
+
+.course-projects-section .project-card:hover {
+  box-shadow: 0px 8px 40px 0px rgba(35, 31, 32, 0.18);
+  transform: translateY(-4px);
+}
+
+/* Project Icon Box */
+.course-projects-section .project-icon-box {
+  width: 95px;
+  height: 95px;
+  background: #4A4A4A;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.course-projects-section .project-icon-box img {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+}
+
+/* Project Info */
+.course-projects-section .project-info {
+  flex-grow: 1;
+}
+
+.course-projects-section .project-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #191C1D;
+  margin-bottom: 4px;
+}
+
+.course-projects-section .project-info p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* Skills Learned Row */
+.skills-section {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-label {
+    font-size: 20px;
+    font-weight: 700;
+    color: #191C1D;
+    display: block; 
+    margin-bottom: 8px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFF5EE;
+  border: 1px solid #F8CBB8;
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #191C1D;
+}
+
+.skill-check {
+  width: 18px;
+  height: 18px;
+  background: #F07500;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.project-fallback-icon {
+  font-size: 32px;
+  color: #F07500;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN (Tablet & Mobile)
+===================================================== */
+@media (max-width: 992px) {
+  .course-projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .course-projects-header h2 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-projects-section .project-card {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding: 20px;
+    height: auto;
+  }
+  .course-projects-header h2 {
+    font-size: 30px;
+  }
+  .skills-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .course-projects-section .project-icon-box {
+    width: 75px;
+    height: 75px;
+  }
+  .course-projects-section .project-icon-box img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-projects-header h2 {
+    font-size: 24px;
+  }
+  .course-projects-section .project-card {
+    padding: 16px;
+  }
+  .skill-tag {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 359px) {
+  .course-projects-header h2 {
+    font-size: 20px;
+  }
+  .course-projects-section .project-card {
+    padding: 12px;
+  }
+}
