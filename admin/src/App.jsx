@@ -53,6 +53,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Root redirect */}
+        <Route path="/" element={<Navigate to="/admin/login" replace />} />
+
         {/* Public */}
         <Route path="/admin/login" element={<AdminLogin />} />
 
@@ -153,7 +156,7 @@ const App = () => {
         </Route>
 
         {/* Catch-all */}
-        {/* <Route path="*" element={<Navigate to="/admin/login" replace />} /> */}
+        <Route path="*" element={<Navigate to="/admin/login" replace />} />
       </Routes>
     </BrowserRouter>
   );
