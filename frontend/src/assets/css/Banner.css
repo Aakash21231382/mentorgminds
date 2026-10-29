@@ -5,7 +5,7 @@
         width: 100%;
         min-height: 600px;
         background-color: #EEF8FF;
-        background-image: url("../assets/images/Banner-Bg.svg");
+        background-image: url("../images/Banner-Bg.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -164,7 +164,7 @@
     }
 
     .banner--loading {
-        background-image: url("../assets/images/Banner-Bg.svg");
+        background-image: url("../images/Banner-Bg.svg");
         min-height: 400px;
     }
     
